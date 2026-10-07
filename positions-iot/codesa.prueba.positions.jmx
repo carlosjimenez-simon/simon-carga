@@ -1,0 +1,1176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6.3">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Venta_Escalabilidad">
+      <boolProp name="TestPlan.functional_mode">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">true</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+    </TestPlan>
+    <hashTree>
+      <com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup guiclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroupGui" testclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup" testname="UsuariosVirtuales">
+        <elementProp name="ThreadGroup.main_controller" elementType="com.blazemeter.jmeter.control.VirtualUserController"/>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <stringProp name="TargetLevel">${__tstFeedback(EscenarioPrueba,50,200,100)}</stringProp>
+        <stringProp name="RampUp"></stringProp>
+        <stringProp name="Steps"></stringProp>
+        <stringProp name="Hold">1500</stringProp>
+        <stringProp name="LogFilename"></stringProp>
+        <stringProp name="Iterations"></stringProp>
+        <stringProp name="Unit">S</stringProp>
+        <boolProp name="same_user_on_next_iteration">true</boolProp>
+      </com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup>
+      <hashTree>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="ArchivoDatos">
+          <stringProp name="filename">/Users/carlos.jimenez/Documents/carga/positions-iot/Datos-positions.csv</stringProp>
+          <stringProp name="fileEncoding"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <boolProp name="ignoreFirstLine">true</boolProp>
+          <stringProp name="delimiter">;</stringProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="shareMode">shareMode.all</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <kg.apc.jmeter.timers.VariableThroughputTimer guiclass="kg.apc.jmeter.timers.VariableThroughputTimerGui" testclass="kg.apc.jmeter.timers.VariableThroughputTimer" testname="EscenarioPrueba-Carga">
+          <collectionProp name="load_profile">
+            <collectionProp name="1953650429">
+              <stringProp name="49">1</stringProp>
+              <stringProp name="49">1</stringProp>
+              <stringProp name="53430">600</stringProp>
+            </collectionProp>
+            <collectionProp name="140437408">
+              <stringProp name="48">0</stringProp>
+              <stringProp name="48">0</stringProp>
+              <stringProp name="1722">60</stringProp>
+            </collectionProp>
+          </collectionProp>
+        </kg.apc.jmeter.timers.VariableThroughputTimer>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Comprar paso 0/ParametroSistema/consultarParametro-3" enabled="false">
+          <stringProp name="HTTPSampler.domain">${ip}</stringProp>
+          <stringProp name="HTTPSampler.port">${puerto}</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.path">/ParametroSistema/consultarParametro</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&quot;codigo&quot;:&quot;CAPTCHA&quot;}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.TransactionsPerSecondGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="TPS" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename">/Users/familia/Documents/IT4ALL/Test/WARENA/Referencia/TPS.csv</stringProp>
+            <longProp name="interval_grouping">1000</longProp>
+            <boolProp name="graph_aggregated">false</boolProp>
+            <stringProp name="include_sample_labels"></stringProp>
+            <stringProp name="exclude_sample_labels"></stringProp>
+            <stringProp name="start_offset"></stringProp>
+            <stringProp name="end_offset"></stringProp>
+            <boolProp name="include_checkbox_state">false</boolProp>
+            <boolProp name="exclude_checkbox_state">false</boolProp>
+          </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
+          <hashTree/>
+          <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.ResponseTimesOverTimeGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="TiempoRespuesta" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename">/Users/familia/Documents/IT4ALL/Test/WARENA/Referencia/TiempoRespuesta.csv</stringProp>
+            <longProp name="interval_grouping">500</longProp>
+            <boolProp name="graph_aggregated">false</boolProp>
+            <stringProp name="include_sample_labels"></stringProp>
+            <stringProp name="exclude_sample_labels"></stringProp>
+            <stringProp name="start_offset"></stringProp>
+            <stringProp name="end_offset"></stringProp>
+            <boolProp name="include_checkbox_state">false</boolProp>
+            <boolProp name="exclude_checkbox_state">false</boolProp>
+          </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Comprar paso 0/ParametroSistema/consultarParametro-2" enabled="false">
+          <stringProp name="HTTPSampler.domain">${ip}</stringProp>
+          <stringProp name="HTTPSampler.port">${puerto}</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.path">/ParametroSistema/consultarParametro</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&quot;codigo&quot;:&quot;VNTONLINE&quot;}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Comprar paso 0/ParametroSistema/consultarParametro-6" enabled="false">
+          <stringProp name="HTTPSampler.domain">${ip}</stringProp>
+          <stringProp name="HTTPSampler.port">${puerto}</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.path">/ParametroSistema/consultarParametro</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&quot;codigo&quot;:&quot;MEDIOTUCOM&quot;}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Comprar paso 0/ParametroSistema/consultarParametro-5" enabled="false">
+          <stringProp name="HTTPSampler.domain">${ip}</stringProp>
+          <stringProp name="HTTPSampler.port">${puerto}</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.path">/ParametroSistema/consultarParametro</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&quot;codigo&quot;:&quot;MEDIOKUPI&quot;}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Comprar paso 1/EventosPortal/ConsultarDescuentoClienteEvento-10" enabled="false">
+          <stringProp name="HTTPSampler.domain">${ip}</stringProp>
+          <stringProp name="HTTPSampler.port">${puerto}</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.path">/EventosPortal/ConsultarDescuentoClienteEvento</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&quot;tipoDocumento&quot;:301,&quot;numeroDocumento&quot;:80469845,&quot;nitEmpresa&quot;:&quot;890.305.773-4&quot;,&quot;eventoId&quot;:236}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Comprar paso 0/ParametroSistema/consultarParametro-8" enabled="false">
+          <stringProp name="HTTPSampler.domain">${ip}</stringProp>
+          <stringProp name="HTTPSampler.port">${puerto}</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.path">/ParametroSistema/consultarParametro</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&quot;codigo&quot;:&quot;CMNWEBKUPI&quot;}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Comprar paso 0/ParametroSistema/consultarParametro-7" enabled="false">
+          <stringProp name="HTTPSampler.domain">${ip}</stringProp>
+          <stringProp name="HTTPSampler.port">${puerto}</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.path">/ParametroSistema/consultarParametro</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&quot;codigo&quot;:&quot;CMNWEB&quot;}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Comprar paso 0/EventosPortal/ConsultarTiposDocumentos-1" enabled="false">
+          <stringProp name="HTTPSampler.domain">${ip}</stringProp>
+          <stringProp name="HTTPSampler.port">${puerto}</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.path">/EventosPortal/ConsultarTiposDocumentos</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Comprar paso 1/EventosPortal/ConsultarClienteDocumento-9" enabled="false">
+          <stringProp name="HTTPSampler.domain">${ip}</stringProp>
+          <stringProp name="HTTPSampler.port">${puerto}</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.path">/EventosPortal/ConsultarClienteDocumento</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&quot;tipoDocumento&quot;:301,&quot;numeroDocumento&quot;:80469845,&quot;nitEmpresa&quot;:&quot;890.305.773-4&quot;}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Comprar paso 1/VentasEnLinea/consultarPreventa/80469845/236-11" enabled="false">
+          <intProp name="HTTPSampler.connect_timeout">0</intProp>
+          <stringProp name="HTTPSampler.domain">${ip}</stringProp>
+          <stringProp name="HTTPSampler.port">${puerto}</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.path">/VentasEnLinea/consultarPreventa/${numeroDocumento}/${idEvento}</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.TransactionsPerSecondGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="TPS" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename">/Users/familia/Documents/IT4ALL/Test/WARENA/Referencia/TPS.csv</stringProp>
+            <longProp name="interval_grouping">1000</longProp>
+            <boolProp name="graph_aggregated">false</boolProp>
+            <stringProp name="include_sample_labels"></stringProp>
+            <stringProp name="exclude_sample_labels"></stringProp>
+            <stringProp name="start_offset"></stringProp>
+            <stringProp name="end_offset"></stringProp>
+            <boolProp name="include_checkbox_state">false</boolProp>
+            <boolProp name="exclude_checkbox_state">false</boolProp>
+          </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
+          <hashTree/>
+          <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.ResponseTimesOverTimeGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="TiempoRespuesta" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename">/Users/familia/Documents/IT4ALL/Test/WARENA/Referencia/TiempoRespuesta.csv</stringProp>
+            <longProp name="interval_grouping">500</longProp>
+            <boolProp name="graph_aggregated">false</boolProp>
+            <stringProp name="include_sample_labels"></stringProp>
+            <stringProp name="exclude_sample_labels"></stringProp>
+            <stringProp name="start_offset"></stringProp>
+            <stringProp name="end_offset"></stringProp>
+            <boolProp name="include_checkbox_state">false</boolProp>
+            <boolProp name="exclude_checkbox_state">false</boolProp>
+          </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
+          <hashTree/>
+        </hashTree>
+        <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.HitsPerSecondGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="RPS">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+          <longProp name="interval_grouping">1000</longProp>
+          <boolProp name="graph_aggregated">false</boolProp>
+          <stringProp name="include_sample_labels"></stringProp>
+          <stringProp name="exclude_sample_labels"></stringProp>
+          <stringProp name="start_offset"></stringProp>
+          <stringProp name="end_offset"></stringProp>
+          <boolProp name="include_checkbox_state">false</boolProp>
+          <boolProp name="exclude_checkbox_state">false</boolProp>
+        </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
+        <hashTree/>
+        <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.ThreadsStateOverTimeGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="UsuariosActivos">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+          <longProp name="interval_grouping">500</longProp>
+          <boolProp name="graph_aggregated">false</boolProp>
+          <stringProp name="include_sample_labels"></stringProp>
+          <stringProp name="exclude_sample_labels"></stringProp>
+          <stringProp name="start_offset"></stringProp>
+          <stringProp name="end_offset"></stringProp>
+          <boolProp name="include_checkbox_state">false</boolProp>
+          <boolProp name="exclude_checkbox_state">false</boolProp>
+        </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Reporte">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+          <boolProp name="useGroupName">true</boolProp>
+        </ResultCollector>
+        <hashTree/>
+        <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.TransactionsPerSecondGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="TPS">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+          <longProp name="interval_grouping">1000</longProp>
+          <boolProp name="graph_aggregated">false</boolProp>
+          <stringProp name="include_sample_labels"></stringProp>
+          <stringProp name="exclude_sample_labels"></stringProp>
+          <stringProp name="start_offset"></stringProp>
+          <stringProp name="end_offset"></stringProp>
+          <boolProp name="include_checkbox_state">false</boolProp>
+          <boolProp name="exclude_checkbox_state">false</boolProp>
+        </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
+        <hashTree/>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="VariablesEntorno">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="server-local-name" elementType="Argument">
+              <stringProp name="Argument.name">server-local-name</stringProp>
+              <stringProp name="Argument.value">54.161.80.16</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="server-local-port" elementType="Argument">
+              <stringProp name="Argument.name">server-local-port</stringProp>
+              <stringProp name="Argument.value">80</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="server-local-protocol" elementType="Argument">
+              <stringProp name="Argument.name">server-local-protocol</stringProp>
+              <stringProp name="Argument.value">http</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="server-dev-name" elementType="Argument">
+              <stringProp name="Argument.name">server-dev-name</stringProp>
+              <stringProp name="Argument.value">dev-bo-ms-gateway.codesa.com.co</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="server-dev-port" elementType="Argument">
+              <stringProp name="Argument.name">server-dev-port</stringProp>
+              <stringProp name="Argument.value">443</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="server-dev-protocol" elementType="Argument">
+              <stringProp name="Argument.name">server-dev-protocol</stringProp>
+              <stringProp name="Argument.value">https</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="server-test-name" elementType="Argument">
+              <stringProp name="Argument.name">server-test-name</stringProp>
+              <stringProp name="Argument.value">54.161.80.16</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="server-test-port" elementType="Argument">
+              <stringProp name="Argument.name">server-test-port</stringProp>
+              <stringProp name="Argument.value">8080</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="server-test-protocol" elementType="Argument">
+              <stringProp name="Argument.name">server-test-protocol</stringProp>
+              <stringProp name="Argument.value">http</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="token" elementType="Argument">
+              <stringProp name="Argument.name">token</stringProp>
+              <stringProp name="Argument.value">eyJhbGciOiJIUzUxMiJ9.eyJhcGVsbGlkb3MiOiJXIEFSRU5BIiwicm9sSWQiOjEsInBhbnRhbGxhcyI6W3sicGFudGFsbGFJZCI6MSwicGFudGFsbGFDb2RpZ28iOiJJTklDSU8iLCJwYW50YWxsYVRpdHVsbyI6IkluaWNpbyIsInBhbnRhbGxhVXJsIjoiaG9tZSIsInBhbnRhbGxhRGVzY3JpcGNpb24iOiJObyIsInBhbnRhbGxhSWNvbm8iOiJmYS1ob21lIn0seyJwYW50YWxsYUlkIjoyLCJwYW50YWxsYUNvZGlnbyI6IlBFUlNPTkFTIiwicGFudGFsbGFUaXR1bG8iOiJQZXJzb25hcyIsInBhbnRhbGxhVXJsIjoicGVyc29uYXMiLCJwYW50YWxsYURlc2NyaXBjaW9uIjoiTm8iLCJwYW50YWxsYUljb25vIjoiZmEtdXNlcnMifSx7InBhbnRhbGxhSWQiOjMsInBhbnRhbGxhQ29kaWdvIjoiRVNDRU5BUklPUyIsInBhbnRhbGxhVGl0dWxvIjoiRXNjZW5hcmlvcyIsInBhbnRhbGxhVXJsIjoiZXNjZW5hcmlvcyIsInBhbnRhbGxhRGVzY3JpcGNpb24iOiJObyIsInBhbnRhbGxhSWNvbm8iOiJmYS11bml2ZXJzaXR5In0seyJwYW50YWxsYUlkIjo0LCJwYW50YWxsYUNvZGlnbyI6IkVWRU5UT1MiLCJwYW50YWxsYVRpdHVsbyI6IkV2ZW50b3MiLCJwYW50YWxsYVVybCI6ImV2ZW50b3MiLCJwYW50YWxsYURlc2NyaXBjaW9uIjoiTm8iLCJwYW50YWxsYUljb25vIjoiZmEtdGFnIn0seyJwYW50YWxsYUlkIjo1LCJwYW50YWxsYUNvZGlnbyI6IkFCT05PUyIsInBhbnRhbGxhVGl0dWxvIjoiQWJvbm9zIiwicGFudGFsbGFVcmwiOiJhYm9uYWRvcyIsInBhbnRhbGxhRGVzY3JpcGNpb24iOiJObyIsInBhbnRhbGxhSWNvbm8iOiJmYS10YWdzIn0seyJwYW50YWxsYUlkIjo2LCJwYW50YWxsYUNvZGlnbyI6IlBBUkFNRVRST1MiLCJwYW50YWxsYVRpdHVsbyI6IlBhcsOhbWV0cm9zIiwicGFudGFsbGFVcmwiOiJwYXJhbWV0cm9zIiwicGFudGFsbGFEZXNjcmlwY2lvbiI6Ik5vIiwicGFudGFsbGFJY29ubyI6ImZhLWN1YmVzIn0seyJwYW50YWxsYUlkIjo3LCJwYW50YWxsYUNvZGlnbyI6IkNPUlRFU0lBUyIsInBhbnRhbGxhVGl0dWxvIjoiQ29ydGVzw61hcyIsInBhbnRhbGxhVXJsIjoiY29ydGVzaWFzIiwicGFudGFsbGFEZXNjcmlwY2lvbiI6Ik5vIiwicGFudGFsbGFJY29ubyI6ImZhLWdpZnQifSx7InBhbnRhbGxhSWQiOjgsInBhbnRhbGxhQ29kaWdvIjoiR0VTVElPTiBERSBDT1JURVNJQVMiLCJwYW50YWxsYVRpdHVsbyI6Ikdlc3Rpw7NuIGRlIGNvcnRlc8OtYXMiLCJwYW50YWxsYVVybCI6Ikdlc3Rpb24gZGUgY29ydGVzaWFzIiwicGFudGFsbGFEZXNjcmlwY2lvbiI6Ik5vIiwicGFudGFsbGFJY29ubyI6ImZhLWJvb2sifSx7InBhbnRhbGxhSWQiOjksInBhbnRhbGxhQ29kaWdvIjoiR0VORVJBUiBDT1JURVNJQVMiLCJwYW50YWxsYVRpdHVsbyI6IkdlbmVyYXIgY29ydGVzw61hcyIsInBhbnRhbGxhVXJsIjoiQ2FyZ3VlIGRlIGNvcnRlc2lhcyIsInBhbnRhbGxhRGVzY3JpcGNpb24iOiJObyIsInBhbnRhbGxhSWNvbm8iOiJmYS1naWZ0In0seyJwYW50YWxsYUlkIjoxMCwicGFudGFsbGFDb2RpZ28iOiJBUkNISVZPUyIsInBhbnRhbGxhVGl0dWxvIjoiQ2FyZ3VlIGRlIGFyY2hpdm9zIiwicGFudGFsbGFVcmwiOiJhcmNoaXZvcyIsInBhbnRhbGxhRGVzY3JpcGNpb24iOiJObyIsInBhbnRhbGxhSWNvbm8iOiJmYS1hcmNoaXZlIn0seyJwYW50YWxsYUlkIjoxMSwicGFudGFsbGFDb2RpZ28iOiJDQVJHVUUgREUgUEVSU09OQVMiLCJwYW50YWxsYVRpdHVsbyI6IkNhcmd1ZSBkZSBwZXJzb25hcyIsInBhbnRhbGxhVXJsIjoiQ2FyZ3VlIGRlIHBlcnNvbmFzIiwicGFudGFsbGFEZXNjcmlwY2lvbiI6Ik5vIiwicGFudGFsbGFJY29ubyI6ImZhLWFyY2hpdmUifSx7InBhbnRhbGxhSWQiOjEyLCJwYW50YWxsYUNvZGlnbyI6IkNBUkdVRSBERSBCT0xFVEFTIiwicGFudGFsbGFUaXR1bG8iOiJDYXJndWUgZGUgYm9sZXRhcyIsInBhbnRhbGxhVXJsIjoiQ2FyZ3VlIGRlIGJvbGV0YXMiLCJwYW50YWxsYURlc2NyaXBjaW9uIjoiTm8iLCJwYW50YWxsYUljb25vIjoiZmEtYXJjaGl2ZSJ9LHsicGFudGFsbGFJZCI6MTMsInBhbnRhbGxhQ29kaWdvIjoiUkVQT1JURVMiLCJwYW50YWxsYVRpdHVsbyI6IlJlcG9ydGVzIiwicGFudGFsbGFVcmwiOiJyZXBvcnRlcyIsInBhbnRhbGxhRGVzY3JpcGNpb24iOiJObyIsInBhbnRhbGxhSWNvbm8iOiJmYS10YXNrcyJ9LHsicGFudGFsbGFJZCI6MTQsInBhbnRhbGxhQ29kaWdvIjoiUkVQT1JURVMgREUgSU5HUkVTTyIsInBhbnRhbGxhVGl0dWxvIjoiUmVwb3J0ZXMgZGUgaW5ncmVzbyIsInBhbnRhbGxhVXJsIjoiUmVwb3J0ZXMgZGUgaW5ncmVzbyIsInBhbnRhbGxhRGVzY3JpcGNpb24iOiJObyIsInBhbnRhbGxhSWNvbm8iOiJmYS10YXNrcyJ9LHsicGFudGFsbGFJZCI6MTUsInBhbnRhbGxhQ29kaWdvIjoiUkVQT1JURVMgREUgSU5URUdSQUNJT04iLCJwYW50YWxsYVRpdHVsbyI6IlJlcG9ydGVzIGRlIGludGVncmFjacOzbiIsInBhbnRhbGxhVXJsIjoiUmVwb3J0ZXMgZGUgaW50ZWdyYWNpb24iLCJwYW50YWxsYURlc2NyaXBjaW9uIjoiTm8iLCJwYW50YWxsYUljb25vIjoiZmEtdGFza3MifSx7InBhbnRhbGxhSWQiOjE3LCJwYW50YWxsYUNvZGlnbyI6IlJFUE9SVEVTIERFIFZFTlRBIiwicGFudGFsbGFUaXR1bG8iOiJSZXBvcnRlcyBkZSB2ZW50YSIsInBhbnRhbGxhVXJsIjoiUmVwb3J0ZXMgZGUgdmVudGEiLCJwYW50YWxsYURlc2NyaXBjaW9uIjoiTm8iLCJwYW50YWxsYUljb25vIjoiZmEtdGFza3MifSx7InBhbnRhbGxhSWQiOjI4LCJwYW50YWxsYUNvZGlnbyI6IkFVRElUT1JJQSIsInBhbnRhbGxhVGl0dWxvIjoiQXVkaXRvcmlhIiwicGFudGFsbGFVcmwiOiJhdWRpdG9yaWEiLCJwYW50YWxsYURlc2NyaXBjaW9uIjoiTm8iLCJwYW50YWxsYUljb25vIjoiZmEtbGlzdC1hbHQifSx7InBhbnRhbGxhSWQiOjI5LCJwYW50YWxsYUNvZGlnbyI6IkFDVFVBTElaQVIgQ09OVFJBU0XDkUFTIiwicGFudGFsbGFUaXR1bG8iOiJBY3R1YWxpemFyIGNvbnRyYXNlw7FhcyIsInBhbnRhbGxhVXJsIjoiQWN0dWFsaXphciBjb250cmFzZW5hcyIsInBhbnRhbGxhRGVzY3JpcGNpb24iOiJObyIsInBhbnRhbGxhSWNvbm8iOiIifSx7InBhbnRhbGxhSWQiOjMxLCJwYW50YWxsYUNvZGlnbyI6IlNBSSIsInBhbnRhbGxhVGl0dWxvIjoiU2FpIiwicGFudGFsbGFVcmwiOiJzYWkiLCJwYW50YWxsYURlc2NyaXBjaW9uIjoiTm8iLCJwYW50YWxsYUljb25vIjoiZmEtdXNlcnMifSx7InBhbnRhbGxhSWQiOjMzLCJwYW50YWxsYUNvZGlnbyI6IlZJU1VBTElaQVIgUElOIiwicGFudGFsbGFUaXR1bG8iOiJWaXN1YWxpemFyIHRvZG8gZWwgcGluIiwicGFudGFsbGFVcmwiOiJ2aXN1YWxpemFyIHBpbiIsInBhbnRhbGxhRGVzY3JpcGNpb24iOiJObyIsInBhbnRhbGxhSWNvbm8iOiJmYS1zaGFyZSJ9LHsicGFudGFsbGFJZCI6MzIsInBhbnRhbGxhQ29kaWdvIjoiUkVFTlZJTyBERSBQSU5FUyIsInBhbnRhbGxhVGl0dWxvIjoiUmVlbnZpYXIgcGluIiwicGFudGFsbGFVcmwiOiJyZWVudmlhciBwaW4iLCJwYW50YWxsYURlc2NyaXBjaW9uIjoiTm8iLCJwYW50YWxsYUljb25vIjoiZmEtc2hhcmUifV0sIm5pdCI6IjkwMTMwNDk1Mi0wIiwiZXhwIjoxNjg2Mzc4MTg3LCJub21icmUiOiJFTVBSRVNBIiwiaWF0IjoxNjg2MzE4MTg3LCJrZXkiOjAsInJvbE5vbWJyZSI6IlNVUEVSQURNSU4iLCJ1c2VybmFtZSI6IldBUkVOQSJ9._YazbcFQWLIPGrcQPS68Pce0K0pDkx7ri-VTI6slVj0FDWOl9dHjBJ8eraAbMxDRXq6dkqNAr6d1NmxSRQh3ug</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="server-prod-name" elementType="Argument">
+              <stringProp name="Argument.name">server-prod-name</stringProp>
+              <stringProp name="Argument.value">gateway.warena.co</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="server-prod-port" elementType="Argument">
+              <stringProp name="Argument.name">server-prod-port</stringProp>
+              <stringProp name="Argument.value">443</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="server-prod-protocol" elementType="Argument">
+              <stringProp name="Argument.name">server-prod-protocol</stringProp>
+              <stringProp name="Argument.value">https</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="server-uat-name" elementType="Argument">
+              <stringProp name="Argument.name">server-uat-name</stringProp>
+              <stringProp name="Argument.value">uat-bo-ms-gateway.codesa.com.co</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="server-uat-port" elementType="Argument">
+              <stringProp name="Argument.name">server-uat-port</stringProp>
+              <stringProp name="Argument.value">443</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="server-uat-protocol" elementType="Argument">
+              <stringProp name="Argument.name">server-uat-protocol</stringProp>
+              <stringProp name="Argument.value">https</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="ID_Base" elementType="Argument">
+              <stringProp name="Argument.name">ID_Base</stringProp>
+              <stringProp name="Argument.value">6744</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="positions" enabled="false">
+          <intProp name="HTTPSampler.connect_timeout">0</intProp>
+          <stringProp name="HTTPSampler.domain">${server-test-name}</stringProp>
+          <stringProp name="HTTPSampler.port">${server-test-port}</stringProp>
+          <stringProp name="HTTPSampler.protocol">${server-test-protocol}</stringProp>
+          <stringProp name="HTTPSampler.path">/positions</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;ID&quot;: ${__intSum(${ID_Base},${__counter(FALSE,)},)},&#xd;
+  &quot;CreatedAt&quot;: &quot;${CreatedAt}&quot;,&#xd;
+  &quot;UpdatedAt&quot;: &quot;${UpdatedAt}&quot;,&#xd;
+  &quot;DeletedAt&quot;: null,&#xd;
+  &quot;protocol&quot;: &quot;${protocol}&quot;,&#xd;
+  &quot;deviceId&quot;: ${deviceId},&#xd;
+  &quot;serverTime&quot;: &quot;${serverTime}&quot;,&#xd;
+  &quot;deviceTime&quot;: &quot;${deviceTime}&quot;,&#xd;
+  &quot;fixTime&quot;: &quot;${fixTime}&quot;,&#xd;
+  &quot;valid&quot;: ${valid},&#xd;
+  &quot;latitude&quot;: ${__javaScript(${latitude} + 0.0001 * ${__counter(FALSE,)},)},&#xd;
+  &quot;longitude&quot;: ${__javaScript(${longitude} - 0.0001 * ${__counter(FALSE,)},)},&#xd;
+  &quot;altitude&quot;: ${altitude},&#xd;
+  &quot;speed&quot;: ${speed},&#xd;
+  &quot;course&quot;: ${course},&#xd;
+  &quot;address&quot;: ${address},&#xd;
+  &quot;attributes&quot;: ${attributes},&#xd;
+  &quot;accuracy&quot;: ${accuracy},&#xd;
+  &quot;network&quot;: ${network},&#xd;
+  &quot;geofenceIds&quot;: ${geofenceIds}&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.TransactionsPerSecondGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="TPS" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+            <longProp name="interval_grouping">1000</longProp>
+            <boolProp name="graph_aggregated">false</boolProp>
+            <stringProp name="include_sample_labels"></stringProp>
+            <stringProp name="exclude_sample_labels"></stringProp>
+            <stringProp name="start_offset"></stringProp>
+            <stringProp name="end_offset"></stringProp>
+            <boolProp name="include_checkbox_state">false</boolProp>
+            <boolProp name="exclude_checkbox_state">false</boolProp>
+          </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
+          <hashTree/>
+          <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.ResponseTimesOverTimeGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="TiempoRespuesta" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+            <longProp name="interval_grouping">500</longProp>
+            <boolProp name="graph_aggregated">false</boolProp>
+            <stringProp name="include_sample_labels"></stringProp>
+            <stringProp name="exclude_sample_labels"></stringProp>
+            <stringProp name="start_offset"></stringProp>
+            <stringProp name="end_offset"></stringProp>
+            <boolProp name="include_checkbox_state">false</boolProp>
+            <boolProp name="exclude_checkbox_state">false</boolProp>
+          </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
+          <hashTree/>
+        </hashTree>
+        <kg.apc.jmeter.timers.VariableThroughputTimer guiclass="kg.apc.jmeter.timers.VariableThroughputTimerGui" testclass="kg.apc.jmeter.timers.VariableThroughputTimer" testname="EscenarioPrueba-Escalabilidad}" enabled="false">
+          <collectionProp name="load_profile">
+            <collectionProp name="140439713">
+              <stringProp name="49">1</stringProp>
+              <stringProp name="49">1</stringProp>
+              <stringProp name="1629">30</stringProp>
+            </collectionProp>
+            <collectionProp name="140439713">
+              <stringProp name="49">1</stringProp>
+              <stringProp name="49">1</stringProp>
+              <stringProp name="1629">30</stringProp>
+            </collectionProp>
+            <collectionProp name="140439713">
+              <stringProp name="49">1</stringProp>
+              <stringProp name="49">1</stringProp>
+              <stringProp name="1629">30</stringProp>
+            </collectionProp>
+            <collectionProp name="140439713">
+              <stringProp name="49">1</stringProp>
+              <stringProp name="49">1</stringProp>
+              <stringProp name="1629">30</stringProp>
+            </collectionProp>
+            <collectionProp name="140439713">
+              <stringProp name="49">1</stringProp>
+              <stringProp name="49">1</stringProp>
+              <stringProp name="1629">30</stringProp>
+            </collectionProp>
+            <collectionProp name="140439713">
+              <stringProp name="49">1</stringProp>
+              <stringProp name="49">1</stringProp>
+              <stringProp name="1629">30</stringProp>
+            </collectionProp>
+            <collectionProp name="140439713">
+              <stringProp name="49">1</stringProp>
+              <stringProp name="49">1</stringProp>
+              <stringProp name="1629">30</stringProp>
+            </collectionProp>
+            <collectionProp name="140439713">
+              <stringProp name="49">1</stringProp>
+              <stringProp name="49">1</stringProp>
+              <stringProp name="1629">30</stringProp>
+            </collectionProp>
+            <collectionProp name="140439713">
+              <stringProp name="49">1</stringProp>
+              <stringProp name="49">1</stringProp>
+              <stringProp name="1629">30</stringProp>
+            </collectionProp>
+            <collectionProp name="1953650429">
+              <stringProp name="49">1</stringProp>
+              <stringProp name="49">1</stringProp>
+              <stringProp name="53430">600</stringProp>
+            </collectionProp>
+            <collectionProp name="140437408">
+              <stringProp name="48">0</stringProp>
+              <stringProp name="48">0</stringProp>
+              <stringProp name="1722">60</stringProp>
+            </collectionProp>
+          </collectionProp>
+        </kg.apc.jmeter.timers.VariableThroughputTimer>
+        <hashTree/>
+        <kg.apc.jmeter.timers.VariableThroughputTimer guiclass="kg.apc.jmeter.timers.VariableThroughputTimerGui" testclass="kg.apc.jmeter.timers.VariableThroughputTimer" testname="EscenarioPrueba-Picos" enabled="false">
+          <collectionProp name="load_profile">
+            <collectionProp name="140503903">
+              <stringProp name="49">1</stringProp>
+              <stringProp name="53">5</stringProp>
+              <stringProp name="1722">60</stringProp>
+            </collectionProp>
+            <collectionProp name="141393138">
+              <stringProp name="53">5</stringProp>
+              <stringProp name="50">2</stringProp>
+              <stringProp name="1722">60</stringProp>
+            </collectionProp>
+            <collectionProp name="1874137921">
+              <stringProp name="50">2</stringProp>
+              <stringProp name="1567">10</stringProp>
+              <stringProp name="1722">60</stringProp>
+            </collectionProp>
+            <collectionProp name="-1974804461">
+              <stringProp name="1567">10</stringProp>
+              <stringProp name="52">4</stringProp>
+              <stringProp name="1722">60</stringProp>
+            </collectionProp>
+            <collectionProp name="141363688">
+              <stringProp name="52">4</stringProp>
+              <stringProp name="56">8</stringProp>
+              <stringProp name="1722">60</stringProp>
+            </collectionProp>
+            <collectionProp name="1818394825">
+              <stringProp name="56">8</stringProp>
+              <stringProp name="1567">10</stringProp>
+              <stringProp name="60">60</stringProp>
+            </collectionProp>
+            <collectionProp name="-2030767843">
+              <stringProp name="1567">10</stringProp>
+              <stringProp name="51">3</stringProp>
+              <stringProp name="60">60</stringProp>
+            </collectionProp>
+            <collectionProp name="85366144">
+              <stringProp name="51">3</stringProp>
+              <stringProp name="57">9</stringProp>
+              <stringProp name="60">60</stringProp>
+            </collectionProp>
+            <collectionProp name="1818431343">
+              <stringProp name="57">9</stringProp>
+              <stringProp name="1567">10</stringProp>
+              <stringProp name="60">60</stringProp>
+            </collectionProp>
+            <collectionProp name="-2030761953">
+              <stringProp name="1567">10</stringProp>
+              <stringProp name="56">8</stringProp>
+              <stringProp name="60">60</stringProp>
+            </collectionProp>
+            <collectionProp name="85540488">
+              <stringProp name="56">8</stringProp>
+              <stringProp name="50">2</stringProp>
+              <stringProp name="60">60</stringProp>
+            </collectionProp>
+            <collectionProp name="85324914">
+              <stringProp name="50">2</stringProp>
+              <stringProp name="53">5</stringProp>
+              <stringProp name="60">60</stringProp>
+            </collectionProp>
+            <collectionProp name="1818285271">
+              <stringProp name="53">5</stringProp>
+              <stringProp name="1567">10</stringProp>
+              <stringProp name="60">60</stringProp>
+            </collectionProp>
+            <collectionProp name="-2030794286">
+              <stringProp name="1567">10</stringProp>
+              <stringProp name="49">1</stringProp>
+              <stringProp name="60">60</stringProp>
+            </collectionProp>
+            <collectionProp name="1873354706">
+              <stringProp name="49">1</stringProp>
+              <stringProp name="1567">10</stringProp>
+              <stringProp name="1722">60</stringProp>
+            </collectionProp>
+            <collectionProp name="1926156715">
+              <stringProp name="48">0</stringProp>
+              <stringProp name="48">0</stringProp>
+              <stringProp name="49710">240</stringProp>
+            </collectionProp>
+          </collectionProp>
+        </kg.apc.jmeter.timers.VariableThroughputTimer>
+        <hashTree/>
+        <kg.apc.jmeter.timers.VariableThroughputTimer guiclass="kg.apc.jmeter.timers.VariableThroughputTimerGui" testclass="kg.apc.jmeter.timers.VariableThroughputTimer" testname="EscenarioPrueba - Resistencia" enabled="false">
+          <collectionProp name="load_profile">
+            <collectionProp name="84510195">
+              <stringProp name="49">1</stringProp>
+              <stringProp name="49">1</stringProp>
+              <stringProp name="53">5</stringProp>
+            </collectionProp>
+            <collectionProp name="85293410">
+              <stringProp name="50">2</stringProp>
+              <stringProp name="49">1</stringProp>
+              <stringProp name="53">5</stringProp>
+            </collectionProp>
+            <collectionProp name="140374421">
+              <stringProp name="48">0</stringProp>
+              <stringProp name="48">0</stringProp>
+              <stringProp name="1598">20</stringProp>
+            </collectionProp>
+          </collectionProp>
+        </kg.apc.jmeter.timers.VariableThroughputTimer>
+        <hashTree/>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header sin Token">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Content-Type</stringProp>
+              <stringProp name="Header.value">application/json</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Accept-Encoding</stringProp>
+              <stringProp name="Header.value">gzip, deflate, br</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Connection</stringProp>
+              <stringProp name="Header.value">keep-alive</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Accept</stringProp>
+              <stringProp name="Header.value">*/*</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Authorization</stringProp>
+              <stringProp name="Header.value">Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJRcWNPZkxNa0ptUWtia0ZWVV9KR1o5QkNhY1diOUdpZWNKb2NTNnEzajJjIn0.eyJleHAiOjE3NjEwNzAwMzEsImlhdCI6MTc2MTA2NDYzMSwiYXV0aF90aW1lIjoxNzYxMDUyMjgxLCJqdGkiOiJkMTdmYTkwMS05OTQwLTRhOTEtYjM3My02ODU2ZTBmMTQ2OTYiLCJpc3MiOiJodHRwczovL2tleWNsb2FrLmJpYmEuY29tLmNvOjg0NDMvcmVhbG1zL3BxciIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiJlMjRkY2RiYy1lMmU3LTRhN2UtYTc0OC0wZTVhNWJkNTA3OGQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJmcm9udGVuZCIsInNpZCI6IjYwY2I5OGU3LTQxZjQtNGJlMC04YTIyLWIyODZhZWUwZTBlOSIsImFjciI6IjAiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cDovL2xvY2FsaG9zdDo0MjAxIiwiaHR0cHM6Ly9jaGF0NGFsbC5pdDRhbGwuY28iLCJodHRwOi8vbG9jYWxob3N0OjQyMDAiLCJodHRwczovL29hdXRoLnBzdG1uLmlvL3YxL2NhbGxiYWNrIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJwcXItcm9sLWFkbW9uLXBxciIsInBxci1yb2wtYWRtb24tc2VndXJpZGFkIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiIsInBxci1yb2wtYWRtb24tdmlzaXRhcyIsImRlZmF1bHQtcm9sZXMtcHFyIiwicHFyLXJvbC1hZG1vbi1iYXNpY2FzIiwicHFyLXJvbC1yZXBvcnQiXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im9wZW5pZCBlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJuYW1lIjoiSm9yZ2UgRHVyYW4iLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJqb3JnZWR1cmFuQGRlY2V2YWwuY29tLmNvIiwiZ2l2ZW5fbmFtZSI6IkpvcmdlIiwiRW50ZXJwcmlzZUNvZGUiOiIzIiwiZmFtaWx5X25hbWUiOiJEdXJhbiIsImVtYWlsIjoiam9yZ2VkdXJhbkBkZWNldmFsLmNvbS5jbyJ9.RaOBJqCetVWUF7cZ-JhuBA0QVHds4y4WoOph9bPKTv64oOnJZ4B-H6O-aWy5guBDSqGHDxtRgEXQGHfHlFTeN_oWYar5PV5f2J9ovspEIR_x2zZsGkTFfs8BqqNhMUNLJE9yuTLJPXAXo4M1Yw_HxyNlQ2PENV3UIGTfLmjAwhz1b8m5E7EWA1ZB5o717evMf4biklK03z6KAJWfcCzjyLzUJADn3iF3iUpHIkj70inVv1f46s1awpSRPkuuoLVLa-hZhpxbtO33LxBpxFUzPf2orLj-M7DA9FwSWmRpMbIUonp2HP6iS1i6xYDu4YHqRJpgcF_95YpaoQYmrO8J1A</stringProp>
+            </elementProp>
+          </collectionProp>
+          <stringProp name="TestPlan.comments">Para enviar la Autorizacion</stringProp>
+        </HeaderManager>
+        <hashTree/>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header con Token" enabled="false">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Content-Type</stringProp>
+              <stringProp name="Header.value">application/json</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Accept-Encoding</stringProp>
+              <stringProp name="Header.value">gzip, deflate, br</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Connection</stringProp>
+              <stringProp name="Header.value">keep-alive</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Authorization</stringProp>
+              <stringProp name="Header.value">Bearer  ${token}</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Accept</stringProp>
+              <stringProp name="Header.value">*/*</stringProp>
+            </elementProp>
+          </collectionProp>
+          <stringProp name="TestPlan.comments">Para enviar la Autorizacion</stringProp>
+        </HeaderManager>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="Request&amp;Response">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.ResponseTimesOverTimeGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="TiempoRespuesta">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+          <longProp name="interval_grouping">500</longProp>
+          <boolProp name="graph_aggregated">false</boolProp>
+          <stringProp name="include_sample_labels"></stringProp>
+          <stringProp name="exclude_sample_labels"></stringProp>
+          <stringProp name="start_offset"></stringProp>
+          <stringProp name="end_offset"></stringProp>
+          <boolProp name="include_checkbox_state">false</boolProp>
+          <boolProp name="exclude_checkbox_state">false</boolProp>
+        </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="getPositions" enabled="false">
+          <stringProp name="HTTPSampler.domain">${server-test-name}</stringProp>
+          <stringProp name="HTTPSampler.port">${server-test-port}</stringProp>
+          <stringProp name="HTTPSampler.protocol">${server-test-protocol}</stringProp>
+          <stringProp name="HTTPSampler.path">/positions/38170</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="JDBC Tabla Positions">
+          <stringProp name="dataSource">PoolPositions</stringProp>
+          <stringProp name="query">select * from tc_positions limit 1</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="resultSetMaxRows"></stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <JDBCDataSource guiclass="TestBeanGUI" testclass="JDBCDataSource" testname="JDBC Connection Configuration">
+          <stringProp name="dataSource">PoolPositions</stringProp>
+          <stringProp name="poolMax">5</stringProp>
+          <stringProp name="timeout">10000</stringProp>
+          <stringProp name="trimInterval">60000</stringProp>
+          <boolProp name="autocommit">true</boolProp>
+          <stringProp name="transactionIsolation">DEFAULT</stringProp>
+          <boolProp name="preinit">false</boolProp>
+          <stringProp name="initQuery"></stringProp>
+          <boolProp name="keepAlive">true</boolProp>
+          <stringProp name="connectionAge">5000</stringProp>
+          <stringProp name="checkQuery"></stringProp>
+          <stringProp name="dbUrl">jdbc:postgresql://100.26.104.157:5433/traccar_db</stringProp>
+          <stringProp name="driver">org.postgresql.Driver</stringProp>
+          <stringProp name="username">postgres</stringProp>
+          <stringProp name="password">cesar</stringProp>
+          <stringProp name="connectionProperties"></stringProp>
+        </JDBCDataSource>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

@@ -1,0 +1,560 @@
+2025-11-13 17:11:56,672 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2025-11-13 17:11:56,681 INFO o.a.j.JMeter: Loading user properties from: /opt/homebrew/Cellar/jmeter/5.6.3/libexec/bin/user.properties
+2025-11-13 17:11:56,681 INFO o.a.j.JMeter: Loading system properties from: /opt/homebrew/Cellar/jmeter/5.6.3/libexec/bin/system.properties
+2025-11-13 17:11:56,683 INFO o.a.j.JMeter: Copyright (c) 1998-2024 The Apache Software Foundation
+2025-11-13 17:11:56,683 INFO o.a.j.JMeter: Version 5.6.3
+2025-11-13 17:11:56,683 INFO o.a.j.JMeter: java.version=21.0.8
+2025-11-13 17:11:56,683 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2025-11-13 17:11:56,683 INFO o.a.j.JMeter: os.name=Mac OS X
+2025-11-13 17:11:56,683 INFO o.a.j.JMeter: os.arch=aarch64
+2025-11-13 17:11:56,683 INFO o.a.j.JMeter: os.version=15.6.1
+2025-11-13 17:11:56,683 INFO o.a.j.JMeter: file.encoding=UTF-8
+2025-11-13 17:11:56,683 INFO o.a.j.JMeter: java.awt.headless=true
+2025-11-13 17:11:56,683 INFO o.a.j.JMeter: Max memory     =1073741824
+2025-11-13 17:11:56,683 INFO o.a.j.JMeter: Available Processors =10
+2025-11-13 17:11:56,686 INFO o.a.j.JMeter: Default Locale=English (EN)
+2025-11-13 17:11:56,687 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2025-11-13 17:11:56,687 INFO o.a.j.JMeter: JMeterHome=/opt/homebrew/Cellar/jmeter/5.6.3/libexec
+2025-11-13 17:11:56,687 INFO o.a.j.JMeter: user.dir  =/Users/carlos.jimenez/Documents/carga/positions-iot
+2025-11-13 17:11:56,687 INFO o.a.j.JMeter: PWD       =/Users/carlos.jimenez/Documents/carga/positions-iot
+2025-11-13 17:11:56,688 INFO o.a.j.JMeter: IP: 192.168.144.89 Name: MacBook-Pro-de-sistemas.local FullName: 192.168.144.89
+2025-11-13 17:11:56,692 INFO o.a.j.s.FileServer: Default base='/Users/carlos.jimenez/Documents/carga/positions-iot'
+2025-11-13 17:11:56,693 INFO o.a.j.s.FileServer: Set new base='/Users/carlos.jimenez/Documents/carga/positions-iot'
+2025-11-13 17:11:56,751 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2025-11-13 17:11:56,765 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2025-11-13 17:11:56,766 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2025-11-13 17:11:56,767 INFO o.a.j.s.SaveService: Loading file: simon.insert.positions.jmx
+2025-11-13 17:11:56,797 INFO o.a.j.JMeter: Creating summariser <summary>
+2025-11-13 17:11:56,801 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2025-11-13 17:11:56,801 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2025-11-13 17:11:56,801 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2025-11-13 17:11:56,803 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2025-11-13 17:11:56,803 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2025-11-13 17:11:56,821 INFO o.a.j.r.ClassFinder: Will scan jar /opt/homebrew/Cellar/jmeter/5.6.3/libexec/lib/ext/jmeter-plugins-manager-1.9.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-11-13 17:11:56,846 INFO o.a.j.r.ClassFinder: Will scan jar /opt/homebrew/Cellar/jmeter/5.6.3/libexec/lib/ext/jmeter-plugins-graphs-additional-2.0.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-11-13 17:11:56,848 INFO o.a.j.r.ClassFinder: Will scan jar /opt/homebrew/Cellar/jmeter/5.6.3/libexec/lib/ext/jmeter-plugins-graphs-basic-2.0.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-11-13 17:11:56,848 INFO o.a.j.r.ClassFinder: Will scan jar /opt/homebrew/Cellar/jmeter/5.6.3/libexec/lib/ext/jmeter-plugins-tst-2.6.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-11-13 17:11:56,849 INFO o.a.j.r.ClassFinder: Will scan jar /opt/homebrew/Cellar/jmeter/5.6.3/libexec/lib/ext/postgresql-42.7.8.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-11-13 17:11:56,870 INFO o.a.j.r.ClassFinder: Will scan jar /opt/homebrew/Cellar/jmeter/5.6.3/libexec/lib/ext/jmeter-plugins-casutg-3.1.1.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-11-13 17:11:56,900 INFO o.a.j.JMeter: Running test (1763071916900)
+2025-11-13 17:11:56,908 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : UsuariosVirtuales
+2025-11-13 17:11:56,908 INFO o.a.j.e.StandardJMeterEngine: Starting 50 threads for group UsuariosVirtuales.
+2025-11-13 17:11:56,908 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2025-11-13 17:11:56,908 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2025-11-13 17:11:56,908 INFO c.b.j.t.c.ConcurrencyThreadStarter: Start supplying threads
+2025-11-13 17:11:56,910 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2025-11-13 17:11:56,910 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
+2025-11-13 17:11:56,910 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2025-11-13 17:11:56,910 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2025-11-13 17:11:56,910 INFO o.a.j.t.JMeterThread: Thread started: UsuariosVirtuales-ThreadStarter 1-1
+2025-11-13 17:11:56,911 INFO o.a.j.t.JMeterThread: Thread started: UsuariosVirtuales-ThreadStarter 1-2
+2025-11-13 17:11:56,911 INFO o.a.j.t.JMeterThread: Thread started: UsuariosVirtuales-ThreadStarter 1-3
+2025-11-13 17:11:56,911 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 0 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:11:56,911 INFO o.a.j.t.JMeterThread: Thread started: UsuariosVirtuales-ThreadStarter 1-5
+2025-11-13 17:11:56,911 INFO o.a.j.t.JMeterThread: Thread started: UsuariosVirtuales-ThreadStarter 1-4
+2025-11-13 17:11:56,912 INFO o.a.j.t.JMeterThread: Thread started: UsuariosVirtuales-ThreadStarter 1-6
+2025-11-13 17:11:56,912 INFO o.a.j.t.JMeterThread: Thread started: UsuariosVirtuales-ThreadStarter 1-7
+2025-11-13 17:11:56,912 INFO o.a.j.t.JMeterThread: Thread started: UsuariosVirtuales-ThreadStarter 1-8
+2025-11-13 17:11:56,913 INFO o.a.j.t.JMeterThread: Thread started: UsuariosVirtuales-ThreadStarter 1-9
+2025-11-13 17:11:56,913 INFO o.a.j.t.JMeterThread: Thread started: UsuariosVirtuales-ThreadStarter 1-10
+2025-11-13 17:11:56,914 INFO o.a.j.t.JMeterThread: Thread started: UsuariosVirtuales-ThreadStarter 1-11
+2025-11-13 17:11:56,914 INFO o.a.j.t.JMeterThread: Thread started: UsuariosVirtuales-ThreadStarter 1-12
+2025-11-13 17:11:56,916 INFO o.a.j.t.JMeterThread: Thread started: UsuariosVirtuales-ThreadStarter 1-13
+2025-11-13 17:11:56,917 INFO o.a.j.t.JMeterThread: Thread started: UsuariosVirtuales-ThreadStarter 1-14
+2025-11-13 17:11:56,917 INFO o.a.j.t.JMeterThread: Thread started: UsuariosVirtuales-ThreadStarter 1-15
+2025-11-13 17:11:56,918 INFO o.a.j.t.JMeterThread: Thread started: UsuariosVirtuales-ThreadStarter 1-16
+2025-11-13 17:11:56,918 INFO o.a.j.t.JMeterThread: Thread started: UsuariosVirtuales-ThreadStarter 1-17
+2025-11-13 17:11:56,919 INFO o.a.j.t.JMeterThread: Thread started: UsuariosVirtuales-ThreadStarter 1-18
+2025-11-13 17:11:56,919 INFO o.a.j.t.JMeterThread: Thread started: UsuariosVirtuales-ThreadStarter 1-19
+2025-11-13 17:11:56,919 INFO o.a.j.t.JMeterThread: Thread started: UsuariosVirtuales-ThreadStarter 1-20
+2025-11-13 17:11:56,920 INFO o.a.j.t.JMeterThread: Thread started: UsuariosVirtuales-ThreadStarter 1-21
+2025-11-13 17:11:56,920 INFO o.a.j.t.JMeterThread: Thread started: UsuariosVirtuales-ThreadStarter 1-22
+2025-11-13 17:11:56,920 INFO o.a.j.t.JMeterThread: Thread started: UsuariosVirtuales-ThreadStarter 1-23
+2025-11-13 17:11:56,920 INFO o.a.j.t.JMeterThread: Thread started: UsuariosVirtuales-ThreadStarter 1-24
+2025-11-13 17:11:56,921 INFO o.a.j.t.JMeterThread: Thread started: UsuariosVirtuales-ThreadStarter 1-25
+2025-11-13 17:11:56,921 INFO o.a.j.t.JMeterThread: Thread started: UsuariosVirtuales-ThreadStarter 1-26
+2025-11-13 17:11:56,921 INFO o.a.j.t.JMeterThread: Thread started: UsuariosVirtuales-ThreadStarter 1-27
+2025-11-13 17:11:56,922 INFO o.a.j.t.JMeterThread: Thread started: UsuariosVirtuales-ThreadStarter 1-28
+2025-11-13 17:11:56,922 INFO o.a.j.t.JMeterThread: Thread started: UsuariosVirtuales-ThreadStarter 1-29
+2025-11-13 17:11:56,922 INFO o.a.j.t.JMeterThread: Thread started: UsuariosVirtuales-ThreadStarter 1-30
+2025-11-13 17:11:56,922 INFO o.a.j.t.JMeterThread: Thread started: UsuariosVirtuales-ThreadStarter 1-31
+2025-11-13 17:11:56,923 INFO o.a.j.t.JMeterThread: Thread started: UsuariosVirtuales-ThreadStarter 1-32
+2025-11-13 17:11:56,923 INFO o.a.j.t.JMeterThread: Thread started: UsuariosVirtuales-ThreadStarter 1-33
+2025-11-13 17:11:56,923 INFO o.a.j.t.JMeterThread: Thread started: UsuariosVirtuales-ThreadStarter 1-34
+2025-11-13 17:11:56,924 INFO o.a.j.t.JMeterThread: Thread started: UsuariosVirtuales-ThreadStarter 1-35
+2025-11-13 17:11:56,924 INFO o.a.j.t.JMeterThread: Thread started: UsuariosVirtuales-ThreadStarter 1-36
+2025-11-13 17:11:56,924 INFO o.a.j.t.JMeterThread: Thread started: UsuariosVirtuales-ThreadStarter 1-37
+2025-11-13 17:11:56,925 INFO o.a.j.t.JMeterThread: Thread started: UsuariosVirtuales-ThreadStarter 1-38
+2025-11-13 17:11:56,925 INFO o.a.j.t.JMeterThread: Thread started: UsuariosVirtuales-ThreadStarter 1-39
+2025-11-13 17:11:56,925 INFO o.a.j.t.JMeterThread: Thread started: UsuariosVirtuales-ThreadStarter 1-40
+2025-11-13 17:11:56,925 INFO o.a.j.t.JMeterThread: Thread started: UsuariosVirtuales-ThreadStarter 1-41
+2025-11-13 17:11:56,926 INFO o.a.j.t.JMeterThread: Thread started: UsuariosVirtuales-ThreadStarter 1-42
+2025-11-13 17:11:56,926 INFO o.a.j.t.JMeterThread: Thread started: UsuariosVirtuales-ThreadStarter 1-43
+2025-11-13 17:11:56,926 INFO o.a.j.t.JMeterThread: Thread started: UsuariosVirtuales-ThreadStarter 1-44
+2025-11-13 17:11:56,926 INFO o.a.j.t.JMeterThread: Thread started: UsuariosVirtuales-ThreadStarter 1-45
+2025-11-13 17:11:56,927 INFO o.a.j.t.JMeterThread: Thread started: UsuariosVirtuales-ThreadStarter 1-46
+2025-11-13 17:11:56,927 INFO o.a.j.t.JMeterThread: Thread started: UsuariosVirtuales-ThreadStarter 1-47
+2025-11-13 17:11:56,927 INFO o.a.j.t.JMeterThread: Thread started: UsuariosVirtuales-ThreadStarter 1-48
+2025-11-13 17:11:56,928 INFO o.a.j.t.JMeterThread: Thread started: UsuariosVirtuales-ThreadStarter 1-49
+2025-11-13 17:11:56,928 INFO o.a.j.t.JMeterThread: Thread started: UsuariosVirtuales-ThreadStarter 1-50
+2025-11-13 17:12:11,262 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 10 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:12:30,002 INFO o.a.j.r.Summariser: summary +    421 in 00:00:33 =   12.7/s Avg:  1747 Min:   102 Max: 14578 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:13:00,016 INFO o.a.j.r.Summariser: summary +    588 in 00:00:30 =   19.6/s Avg:   111 Min:   102 Max:   450 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:13:00,018 INFO o.a.j.r.Summariser: summary =   1009 in 00:01:03 =   16.0/s Avg:   794 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:13:30,002 INFO o.a.j.r.Summariser: summary +    583 in 00:00:30 =   19.4/s Avg:   116 Min:   102 Max:   592 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:13:30,003 INFO o.a.j.r.Summariser: summary =   1592 in 00:01:33 =   17.1/s Avg:   546 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:14:00,048 INFO o.a.j.r.Summariser: summary +    588 in 00:00:30 =   19.6/s Avg:   114 Min:   102 Max:   859 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:14:00,049 INFO o.a.j.r.Summariser: summary =   2180 in 00:02:03 =   17.7/s Avg:   429 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:14:30,038 INFO o.a.j.r.Summariser: summary +    580 in 00:00:30 =   19.3/s Avg:   119 Min:   103 Max:   893 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:14:30,039 INFO o.a.j.r.Summariser: summary =   2760 in 00:02:33 =   18.0/s Avg:   364 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:15:00,102 INFO o.a.j.r.Summariser: summary +    585 in 00:00:30 =   19.5/s Avg:   143 Min:   102 Max:  1374 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:15:00,102 INFO o.a.j.r.Summariser: summary =   3345 in 00:03:03 =   18.3/s Avg:   326 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:15:30,030 INFO o.a.j.r.Summariser: summary +    582 in 00:00:30 =   19.4/s Avg:   271 Min:   102 Max:  5489 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:15:30,031 INFO o.a.j.r.Summariser: summary =   3927 in 00:03:33 =   18.4/s Avg:   318 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:16:00,044 INFO o.a.j.r.Summariser: summary +    587 in 00:00:30 =   19.6/s Avg:   527 Min:   106 Max:  8182 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:16:00,044 INFO o.a.j.r.Summariser: summary =   4514 in 00:04:03 =   18.6/s Avg:   345 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:16:30,047 INFO o.a.j.r.Summariser: summary +    596 in 00:00:30 =   19.9/s Avg:   407 Min:   102 Max: 13572 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:16:30,047 INFO o.a.j.r.Summariser: summary =   5110 in 00:04:33 =   18.7/s Avg:   352 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:17:00,021 INFO o.a.j.r.Summariser: summary +    582 in 00:00:30 =   19.4/s Avg:   107 Min:   102 Max:   413 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:17:00,022 INFO o.a.j.r.Summariser: summary =   5692 in 00:05:03 =   18.8/s Avg:   327 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:17:30,099 INFO o.a.j.r.Summariser: summary +    586 in 00:00:30 =   19.5/s Avg:   109 Min:   102 Max:   429 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:17:30,100 INFO o.a.j.r.Summariser: summary =   6278 in 00:05:33 =   18.8/s Avg:   307 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:18:00,032 INFO o.a.j.r.Summariser: summary +    581 in 00:00:30 =   19.4/s Avg:   114 Min:   102 Max:   846 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:18:00,033 INFO o.a.j.r.Summariser: summary =   6859 in 00:06:03 =   18.9/s Avg:   290 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:18:30,039 INFO o.a.j.r.Summariser: summary +    586 in 00:00:30 =   19.5/s Avg:   111 Min:   103 Max:   435 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:18:30,040 INFO o.a.j.r.Summariser: summary =   7445 in 00:06:33 =   18.9/s Avg:   276 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:19:00,135 INFO o.a.j.r.Summariser: summary +    586 in 00:00:30 =   19.5/s Avg:   110 Min:   102 Max:   720 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:19:00,136 INFO o.a.j.r.Summariser: summary =   8031 in 00:07:03 =   19.0/s Avg:   264 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:19:30,184 INFO o.a.j.r.Summariser: summary +    585 in 00:00:30 =   19.5/s Avg:   113 Min:   103 Max:   498 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:19:30,185 INFO o.a.j.r.Summariser: summary =   8616 in 00:07:33 =   19.0/s Avg:   254 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:20:00,075 INFO o.a.j.r.Summariser: summary +    585 in 00:00:30 =   19.6/s Avg:   109 Min:   103 Max:   737 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:20:00,076 INFO o.a.j.r.Summariser: summary =   9201 in 00:08:03 =   19.0/s Avg:   245 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:20:30,069 INFO o.a.j.r.Summariser: summary +    590 in 00:00:30 =   19.7/s Avg:   114 Min:   103 Max:   745 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:20:30,070 INFO o.a.j.r.Summariser: summary =   9791 in 00:08:33 =   19.1/s Avg:   237 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:21:00,078 INFO o.a.j.r.Summariser: summary +    584 in 00:00:30 =   19.5/s Avg:   109 Min:   103 Max:   615 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:21:00,079 INFO o.a.j.r.Summariser: summary =  10375 in 00:09:03 =   19.1/s Avg:   230 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:21:30,039 INFO o.a.j.r.Summariser: summary +    585 in 00:00:30 =   19.5/s Avg:   110 Min:   102 Max:   728 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:21:30,040 INFO o.a.j.r.Summariser: summary =  10960 in 00:09:33 =   19.1/s Avg:   223 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:22:00,029 INFO o.a.j.r.Summariser: summary +    586 in 00:00:30 =   19.5/s Avg:   106 Min:   102 Max:   199 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:22:00,030 INFO o.a.j.r.Summariser: summary =  11546 in 00:10:03 =   19.1/s Avg:   217 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:22:30,104 INFO o.a.j.r.Summariser: summary +    587 in 00:00:30 =   19.5/s Avg:   107 Min:   102 Max:   421 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:22:30,104 INFO o.a.j.r.Summariser: summary =  12133 in 00:10:33 =   19.2/s Avg:   212 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:23:00,028 INFO o.a.j.r.Summariser: summary +    591 in 00:00:30 =   19.7/s Avg:   135 Min:   102 Max:  1234 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:23:00,028 INFO o.a.j.r.Summariser: summary =  12724 in 00:11:03 =   19.2/s Avg:   208 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:23:30,013 INFO o.a.j.r.Summariser: summary +    587 in 00:00:30 =   19.6/s Avg:   161 Min:   103 Max:   488 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:23:30,014 INFO o.a.j.r.Summariser: summary =  13311 in 00:11:33 =   19.2/s Avg:   206 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:24:00,030 INFO o.a.j.r.Summariser: summary +    584 in 00:00:30 =   19.5/s Avg:   176 Min:   103 Max:  1034 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:24:00,030 INFO o.a.j.r.Summariser: summary =  13895 in 00:12:03 =   19.2/s Avg:   205 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:24:30,014 INFO o.a.j.r.Summariser: summary +    584 in 00:00:30 =   19.5/s Avg:   168 Min:   103 Max:  1039 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:24:30,014 INFO o.a.j.r.Summariser: summary =  14479 in 00:12:33 =   19.2/s Avg:   203 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:25:00,023 INFO o.a.j.r.Summariser: summary +    590 in 00:00:30 =   19.7/s Avg:   170 Min:   103 Max:  1021 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:25:00,023 INFO o.a.j.r.Summariser: summary =  15069 in 00:13:03 =   19.2/s Avg:   202 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:25:30,067 INFO o.a.j.r.Summariser: summary +    583 in 00:00:30 =   19.4/s Avg:   163 Min:   103 Max:   328 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:25:30,068 INFO o.a.j.r.Summariser: summary =  15652 in 00:13:33 =   19.2/s Avg:   201 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:26:00,158 INFO o.a.j.r.Summariser: summary +    592 in 00:00:30 =   19.7/s Avg:   142 Min:   102 Max:   421 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:26:00,159 INFO o.a.j.r.Summariser: summary =  16244 in 00:14:03 =   19.3/s Avg:   199 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:26:30,021 INFO o.a.j.r.Summariser: summary +    584 in 00:00:30 =   19.6/s Avg:   106 Min:   102 Max:   410 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:26:30,021 INFO o.a.j.r.Summariser: summary =  16828 in 00:14:33 =   19.3/s Avg:   195 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:27:00,095 INFO o.a.j.r.Summariser: summary +    589 in 00:00:30 =   19.6/s Avg:   105 Min:   102 Max:   153 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:27:00,096 INFO o.a.j.r.Summariser: summary =  17417 in 00:15:03 =   19.3/s Avg:   192 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:27:30,026 INFO o.a.j.r.Summariser: summary +    585 in 00:00:30 =   19.5/s Avg:   112 Min:   102 Max:   753 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:27:30,026 INFO o.a.j.r.Summariser: summary =  18002 in 00:15:33 =   19.3/s Avg:   190 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:28:00,027 INFO o.a.j.r.Summariser: summary +    588 in 00:00:30 =   19.6/s Avg:   107 Min:   102 Max:   425 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:28:00,027 INFO o.a.j.r.Summariser: summary =  18590 in 00:16:03 =   19.3/s Avg:   187 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:28:30,018 INFO o.a.j.r.Summariser: summary +    585 in 00:00:30 =   19.5/s Avg:   107 Min:   102 Max:   844 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:28:30,019 INFO o.a.j.r.Summariser: summary =  19175 in 00:16:33 =   19.3/s Avg:   185 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:29:00,023 INFO o.a.j.r.Summariser: summary +    584 in 00:00:30 =   19.5/s Avg:   107 Min:   102 Max:   754 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:29:00,024 INFO o.a.j.r.Summariser: summary =  19759 in 00:17:03 =   19.3/s Avg:   182 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:29:30,001 INFO o.a.j.r.Summariser: summary +    590 in 00:00:30 =   19.7/s Avg:   105 Min:   102 Max:   180 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:29:30,002 INFO o.a.j.r.Summariser: summary =  20349 in 00:17:33 =   19.3/s Avg:   180 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:30:00,058 INFO o.a.j.r.Summariser: summary +    588 in 00:00:30 =   19.6/s Avg:   110 Min:   102 Max:   735 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:30:00,059 INFO o.a.j.r.Summariser: summary =  20937 in 00:18:03 =   19.3/s Avg:   178 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:30:30,039 INFO o.a.j.r.Summariser: summary +    586 in 00:00:30 =   19.5/s Avg:   109 Min:   102 Max:   839 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:30:30,040 INFO o.a.j.r.Summariser: summary =  21523 in 00:18:33 =   19.3/s Avg:   176 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:31:00,031 INFO o.a.j.r.Summariser: summary +    590 in 00:00:30 =   19.7/s Avg:   106 Min:   102 Max:   309 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:31:00,032 INFO o.a.j.r.Summariser: summary =  22113 in 00:19:03 =   19.3/s Avg:   174 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:31:30,052 INFO o.a.j.r.Summariser: summary +    584 in 00:00:30 =   19.5/s Avg:   108 Min:   102 Max:   435 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:31:30,052 INFO o.a.j.r.Summariser: summary =  22697 in 00:19:33 =   19.3/s Avg:   173 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:32:00,044 INFO o.a.j.r.Summariser: summary +    582 in 00:00:30 =   19.4/s Avg:   106 Min:   102 Max:   129 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:32:00,045 INFO o.a.j.r.Summariser: summary =  23279 in 00:20:03 =   19.3/s Avg:   171 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:32:30,053 INFO o.a.j.r.Summariser: summary +    587 in 00:00:30 =   19.6/s Avg:   119 Min:   102 Max:   738 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:32:30,053 INFO o.a.j.r.Summariser: summary =  23866 in 00:20:33 =   19.4/s Avg:   170 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:33:00,004 INFO o.a.j.r.Summariser: summary +    586 in 00:00:30 =   19.6/s Avg:   112 Min:   102 Max:   853 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:33:00,005 INFO o.a.j.r.Summariser: summary =  24452 in 00:21:03 =   19.4/s Avg:   168 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:33:30,067 INFO o.a.j.r.Summariser: summary +    583 in 00:00:30 =   19.4/s Avg:   125 Min:   103 Max:  1034 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:33:30,068 INFO o.a.j.r.Summariser: summary =  25035 in 00:21:33 =   19.4/s Avg:   167 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:34:00,006 INFO o.a.j.r.Summariser: summary +    590 in 00:00:30 =   19.7/s Avg:   144 Min:   103 Max:   300 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:34:00,007 INFO o.a.j.r.Summariser: summary =  25625 in 00:22:03 =   19.4/s Avg:   167 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:34:30,038 INFO o.a.j.r.Summariser: summary +    589 in 00:00:30 =   19.6/s Avg:   116 Min:   103 Max:   742 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:34:30,038 INFO o.a.j.r.Summariser: summary =  26214 in 00:22:33 =   19.4/s Avg:   166 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:35:00,057 INFO o.a.j.r.Summariser: summary +    586 in 00:00:30 =   19.5/s Avg:   106 Min:   103 Max:   161 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:35:00,057 INFO o.a.j.r.Summariser: summary =  26800 in 00:23:03 =   19.4/s Avg:   164 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:35:30,087 INFO o.a.j.r.Summariser: summary +    589 in 00:00:30 =   19.6/s Avg:   107 Min:   103 Max:   273 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:35:30,088 INFO o.a.j.r.Summariser: summary =  27389 in 00:23:33 =   19.4/s Avg:   163 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:36:00,040 INFO o.a.j.r.Summariser: summary +    586 in 00:00:30 =   19.6/s Avg:   113 Min:   103 Max:   829 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:36:00,041 INFO o.a.j.r.Summariser: summary =  27975 in 00:24:03 =   19.4/s Avg:   162 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:36:30,095 INFO o.a.j.r.Summariser: summary +    583 in 00:00:30 =   19.4/s Avg:   110 Min:   103 Max:   737 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:36:30,096 INFO o.a.j.r.Summariser: summary =  28558 in 00:24:33 =   19.4/s Avg:   161 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:37:00,034 INFO o.a.j.r.Summariser: summary +    587 in 00:00:30 =   19.6/s Avg:   107 Min:   103 Max:   723 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:37:00,034 INFO o.a.j.r.Summariser: summary =  29145 in 00:25:03 =   19.4/s Avg:   160 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:37:30,024 INFO o.a.j.r.Summariser: summary +    583 in 00:00:30 =   19.4/s Avg:   133 Min:   103 Max:  1011 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:37:30,025 INFO o.a.j.r.Summariser: summary =  29728 in 00:25:33 =   19.4/s Avg:   159 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:38:00,101 INFO o.a.j.r.Summariser: summary +    587 in 00:00:30 =   19.5/s Avg:   118 Min:   103 Max:   916 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:38:00,101 INFO o.a.j.r.Summariser: summary =  30315 in 00:26:03 =   19.4/s Avg:   159 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:38:30,104 INFO o.a.j.r.Summariser: summary +    589 in 00:00:30 =   19.6/s Avg:   111 Min:   103 Max:   672 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:38:30,105 INFO o.a.j.r.Summariser: summary =  30904 in 00:26:33 =   19.4/s Avg:   158 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:39:00,053 INFO o.a.j.r.Summariser: summary +    588 in 00:00:30 =   19.6/s Avg:   130 Min:   103 Max:  1352 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:39:00,054 INFO o.a.j.r.Summariser: summary =  31492 in 00:27:03 =   19.4/s Avg:   157 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:39:30,026 INFO o.a.j.r.Summariser: summary +    588 in 00:00:30 =   19.6/s Avg:   133 Min:   103 Max:  1084 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:39:30,026 INFO o.a.j.r.Summariser: summary =  32080 in 00:27:33 =   19.4/s Avg:   157 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:40:00,000 INFO o.a.j.r.Summariser: summary +    585 in 00:00:30 =   19.5/s Avg:   110 Min:   103 Max:   426 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:40:00,001 INFO o.a.j.r.Summariser: summary =  32665 in 00:28:03 =   19.4/s Avg:   156 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:40:30,014 INFO o.a.j.r.Summariser: summary +    586 in 00:00:30 =   19.5/s Avg:   128 Min:   103 Max:  1042 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:40:30,014 INFO o.a.j.r.Summariser: summary =  33251 in 00:28:33 =   19.4/s Avg:   155 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:41:00,007 INFO o.a.j.r.Summariser: summary +    582 in 00:00:30 =   19.4/s Avg:   110 Min:   103 Max:   424 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:41:00,007 INFO o.a.j.r.Summariser: summary =  33833 in 00:29:03 =   19.4/s Avg:   155 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:41:30,062 INFO o.a.j.r.Summariser: summary +    582 in 00:00:30 =   19.4/s Avg:   145 Min:   103 Max:  1058 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:41:30,063 INFO o.a.j.r.Summariser: summary =  34415 in 00:29:33 =   19.4/s Avg:   154 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:42:00,011 INFO o.a.j.r.Summariser: summary +    586 in 00:00:30 =   19.6/s Avg:   110 Min:   103 Max:   837 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:42:00,011 INFO o.a.j.r.Summariser: summary =  35001 in 00:30:03 =   19.4/s Avg:   154 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:42:30,024 INFO o.a.j.r.Summariser: summary +    584 in 00:00:30 =   19.5/s Avg:   106 Min:   103 Max:   185 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:42:30,024 INFO o.a.j.r.Summariser: summary =  35585 in 00:30:33 =   19.4/s Avg:   153 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:43:00,008 INFO o.a.j.r.Summariser: summary +    590 in 00:00:30 =   19.7/s Avg:   145 Min:   103 Max:  1138 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:43:00,009 INFO o.a.j.r.Summariser: summary =  36175 in 00:31:03 =   19.4/s Avg:   153 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:43:30,060 INFO o.a.j.r.Summariser: summary +    588 in 00:00:30 =   19.6/s Avg:   136 Min:   103 Max:   509 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:43:30,061 INFO o.a.j.r.Summariser: summary =  36763 in 00:31:33 =   19.4/s Avg:   152 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:44:00,079 INFO o.a.j.r.Summariser: summary +    587 in 00:00:30 =   19.6/s Avg:   106 Min:   103 Max:   429 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:44:00,080 INFO o.a.j.r.Summariser: summary =  37350 in 00:32:03 =   19.4/s Avg:   152 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:44:30,029 INFO o.a.j.r.Summariser: summary +    583 in 00:00:30 =   19.5/s Avg:   109 Min:   103 Max:   778 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:44:30,030 INFO o.a.j.r.Summariser: summary =  37933 in 00:32:33 =   19.4/s Avg:   151 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:45:00,053 INFO o.a.j.r.Summariser: summary +    581 in 00:00:30 =   19.4/s Avg:   107 Min:   103 Max:   426 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:45:00,054 INFO o.a.j.r.Summariser: summary =  38514 in 00:33:03 =   19.4/s Avg:   150 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:45:30,065 INFO o.a.j.r.Summariser: summary +    589 in 00:00:30 =   19.6/s Avg:   108 Min:   103 Max:   732 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:45:30,065 INFO o.a.j.r.Summariser: summary =  39103 in 00:33:33 =   19.4/s Avg:   150 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:46:00,029 INFO o.a.j.r.Summariser: summary +    584 in 00:00:30 =   19.5/s Avg:   106 Min:   103 Max:   135 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:46:00,030 INFO o.a.j.r.Summariser: summary =  39687 in 00:34:03 =   19.4/s Avg:   149 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:46:30,048 INFO o.a.j.r.Summariser: summary +    586 in 00:00:30 =   19.5/s Avg:   106 Min:   103 Max:   571 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:46:30,048 INFO o.a.j.r.Summariser: summary =  40273 in 00:34:33 =   19.4/s Avg:   149 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:47:00,039 INFO o.a.j.r.Summariser: summary +    588 in 00:00:30 =   19.6/s Avg:   109 Min:   103 Max:   768 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:47:00,039 INFO o.a.j.r.Summariser: summary =  40861 in 00:35:03 =   19.4/s Avg:   148 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:47:30,005 INFO o.a.j.r.Summariser: summary +    588 in 00:00:30 =   19.6/s Avg:   114 Min:   103 Max:   767 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:47:30,006 INFO o.a.j.r.Summariser: summary =  41449 in 00:35:33 =   19.4/s Avg:   147 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:48:00,072 INFO o.a.j.r.Summariser: summary +    586 in 00:00:30 =   19.5/s Avg:   107 Min:   103 Max:   314 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:48:00,073 INFO o.a.j.r.Summariser: summary =  42035 in 00:36:03 =   19.4/s Avg:   147 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:48:30,007 INFO o.a.j.r.Summariser: summary +    586 in 00:00:30 =   19.6/s Avg:   108 Min:   103 Max:   530 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:48:30,007 INFO o.a.j.r.Summariser: summary =  42621 in 00:36:33 =   19.4/s Avg:   146 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:49:00,012 INFO o.a.j.r.Summariser: summary +    588 in 00:00:30 =   19.6/s Avg:   107 Min:   103 Max:   731 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:49:00,013 INFO o.a.j.r.Summariser: summary =  43209 in 00:37:03 =   19.4/s Avg:   146 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:49:30,097 INFO o.a.j.r.Summariser: summary +    589 in 00:00:30 =   19.6/s Avg:   107 Min:   103 Max:   743 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:49:30,097 INFO o.a.j.r.Summariser: summary =  43798 in 00:37:33 =   19.4/s Avg:   145 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:50:00,030 INFO o.a.j.r.Summariser: summary +    583 in 00:00:30 =   19.5/s Avg:   106 Min:   103 Max:   412 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:50:00,031 INFO o.a.j.r.Summariser: summary =  44381 in 00:38:03 =   19.4/s Avg:   145 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:50:30,021 INFO o.a.j.r.Summariser: summary +    586 in 00:00:30 =   19.5/s Avg:   105 Min:   103 Max:   158 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:50:30,022 INFO o.a.j.r.Summariser: summary =  44967 in 00:38:33 =   19.4/s Avg:   144 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:51:00,001 INFO o.a.j.r.Summariser: summary +    586 in 00:00:30 =   19.5/s Avg:   109 Min:   103 Max:   731 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:51:00,002 INFO o.a.j.r.Summariser: summary =  45553 in 00:39:03 =   19.4/s Avg:   144 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:51:30,096 INFO o.a.j.r.Summariser: summary +    548 in 00:00:30 =   18.2/s Avg:   115 Min:   103 Max:  2283 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:51:30,097 INFO o.a.j.r.Summariser: summary =  46101 in 00:39:33 =   19.4/s Avg:   143 Min:   102 Max: 14578 Err:     0 (0.00%)
+2025-11-13 17:51:31,008 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 17 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:51:32,008 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 8 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:51:33,095 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 10 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:51:34,015 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 8 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:51:35,025 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 7 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:51:36,021 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 15 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:51:37,115 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 13 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:51:38,142 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 11 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:51:39,129 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 9 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:51:40,011 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 10 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:51:41,037 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 12 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:51:42,087 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 10 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:51:43,116 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 10 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:51:44,042 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 9 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:51:45,032 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 8 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:51:46,167 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 6 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:51:47,065 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 7 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:51:48,155 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 5 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:51:49,023 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 6 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:51:50,099 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 3 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:51:51,133 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 2 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:51:52,161 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 8 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:51:53,019 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 10 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:51:54,061 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 9 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:51:55,116 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 9 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:51:56,163 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 4 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:51:57,265 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 2 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:51:58,132 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 7 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:51:59,171 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 6 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:52:00,046 INFO o.a.j.r.Summariser: summary +    237 in 00:00:30 =    7.9/s Avg:  4686 Min:   164 Max: 30101 Err:     1 (0.42%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:52:00,046 INFO o.a.j.r.Summariser: summary =  46338 in 00:40:03 =   19.3/s Avg:   167 Min:   102 Max: 30101 Err:     1 (0.00%)
+2025-11-13 17:52:00,047 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 7 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:52:01,171 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 5 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:52:02,052 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 5 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:52:03,436 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 10 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:52:04,005 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 5 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:52:05,056 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 10 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:52:06,094 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 8 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:52:07,326 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 2 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:52:08,008 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 6 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:52:09,057 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 6 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:52:10,087 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 11 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:52:11,026 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 9 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:52:12,146 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 9 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:52:13,009 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 13 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:52:14,031 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 10 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:52:15,064 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 9 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:52:16,089 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 10 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:52:17,165 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 15 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:52:18,033 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 7 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:52:19,075 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 9 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:52:20,122 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 10 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:52:21,072 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 8 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:52:22,030 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 12 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:52:23,001 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 12 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:52:24,054 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 6 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:52:25,038 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 10 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:52:26,088 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 11 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:52:27,012 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 15 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:52:30,019 INFO o.a.j.r.Summariser: summary +    348 in 00:00:30 =   11.6/s Avg:  5230 Min:   104 Max: 45131 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:52:30,020 INFO o.a.j.r.Summariser: summary =  46686 in 00:40:33 =   19.2/s Avg:   204 Min:   102 Max: 45131 Err:     1 (0.00%)
+2025-11-13 17:53:00,037 INFO o.a.j.r.Summariser: summary +    582 in 00:00:30 =   19.4/s Avg:   110 Min:   103 Max:   855 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:53:00,038 INFO o.a.j.r.Summariser: summary =  47268 in 00:41:03 =   19.2/s Avg:   203 Min:   102 Max: 45131 Err:     1 (0.00%)
+2025-11-13 17:53:30,046 INFO o.a.j.r.Summariser: summary +    586 in 00:00:30 =   19.5/s Avg:   107 Min:   103 Max:   416 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:53:30,047 INFO o.a.j.r.Summariser: summary =  47854 in 00:41:33 =   19.2/s Avg:   202 Min:   102 Max: 45131 Err:     1 (0.00%)
+2025-11-13 17:54:00,041 INFO o.a.j.r.Summariser: summary +    587 in 00:00:30 =   19.6/s Avg:   113 Min:   103 Max:   758 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:54:00,042 INFO o.a.j.r.Summariser: summary =  48441 in 00:42:03 =   19.2/s Avg:   201 Min:   102 Max: 45131 Err:     1 (0.00%)
+2025-11-13 17:54:30,020 INFO o.a.j.r.Summariser: summary +    589 in 00:00:30 =   19.6/s Avg:   109 Min:   103 Max:   265 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:54:30,020 INFO o.a.j.r.Summariser: summary =  49030 in 00:42:33 =   19.2/s Avg:   200 Min:   102 Max: 45131 Err:     1 (0.00%)
+2025-11-13 17:55:00,065 INFO o.a.j.r.Summariser: summary +    586 in 00:00:30 =   19.5/s Avg:   107 Min:   103 Max:   171 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:55:00,065 INFO o.a.j.r.Summariser: summary =  49616 in 00:43:03 =   19.2/s Avg:   199 Min:   102 Max: 45131 Err:     1 (0.00%)
+2025-11-13 17:55:30,093 INFO o.a.j.r.Summariser: summary +    584 in 00:00:30 =   19.4/s Avg:   107 Min:   103 Max:   122 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:55:30,094 INFO o.a.j.r.Summariser: summary =  50200 in 00:43:33 =   19.2/s Avg:   198 Min:   102 Max: 45131 Err:     1 (0.00%)
+2025-11-13 17:55:53,168 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 12 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:55:54,263 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 7 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:55:55,155 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 7 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:55:56,162 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 13 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:55:57,017 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 11 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:55:58,087 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 11 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:55:59,015 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 10 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:56:00,151 INFO o.a.j.r.Summariser: summary +    463 in 00:00:30 =   15.4/s Avg:   364 Min:   103 Max: 10495 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:56:00,151 INFO o.a.j.r.Summariser: summary =  50663 in 00:44:03 =   19.2/s Avg:   199 Min:   102 Max: 45131 Err:     1 (0.00%)
+2025-11-13 17:56:00,152 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 13 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:56:01,166 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 10 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:56:02,004 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 8 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:56:03,032 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 16 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:56:04,077 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 10 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:56:05,224 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 8 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:56:06,095 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 6 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:56:07,173 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 6 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:56:08,005 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 4 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:56:09,112 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 14 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:56:10,481 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 6 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:56:11,094 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 6 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:56:12,051 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 13 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:56:13,067 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 13 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:56:14,147 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 11 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:56:15,033 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 7 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:56:16,481 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 9 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:56:17,087 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 3 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:56:18,130 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 9 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:56:19,024 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 8 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:56:20,090 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 7 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:56:21,139 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 10 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:56:22,303 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 5 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:56:23,079 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 5 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:56:24,061 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 12 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:56:25,047 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 9 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:56:26,094 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 8 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:56:27,147 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 7 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:56:28,039 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 7 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:56:29,134 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 13 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:56:30,008 INFO o.a.j.r.Summariser: summary +    258 in 00:00:30 =    8.6/s Avg:  5267 Min:   164 Max: 26127 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:56:30,009 INFO o.a.j.r.Summariser: summary =  50921 in 00:44:33 =   19.0/s Avg:   225 Min:   102 Max: 45131 Err:     1 (0.00%)
+2025-11-13 17:56:30,009 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 8 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:56:31,082 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 8 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:56:32,026 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 15 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:56:33,190 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 11 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:56:34,047 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 9 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:56:35,010 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 9 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:56:36,326 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 4 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:56:37,022 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 5 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:56:38,026 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 11 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:56:39,057 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 9 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:56:40,123 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 7 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:56:41,032 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 8 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:56:42,075 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 9 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:56:43,102 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 12 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:56:44,125 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 10 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:56:45,124 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 10 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:56:46,026 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 10 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:56:47,037 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 9 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:56:48,094 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 11 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 17:57:00,005 INFO o.a.j.r.Summariser: summary +    448 in 00:00:30 =   14.9/s Avg:  3458 Min:   104 Max: 65177 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:57:00,006 INFO o.a.j.r.Summariser: summary =  51369 in 00:45:03 =   19.0/s Avg:   253 Min:   102 Max: 65177 Err:     1 (0.00%)
+2025-11-13 17:57:30,041 INFO o.a.j.r.Summariser: summary +    588 in 00:00:30 =   19.6/s Avg:   221 Min:   103 Max: 67615 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:57:30,041 INFO o.a.j.r.Summariser: summary =  51957 in 00:45:33 =   19.0/s Avg:   253 Min:   102 Max: 67615 Err:     1 (0.00%)
+2025-11-13 17:58:00,076 INFO o.a.j.r.Summariser: summary +    587 in 00:00:30 =   19.5/s Avg:   106 Min:   103 Max:   206 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:58:00,077 INFO o.a.j.r.Summariser: summary =  52544 in 00:46:03 =   19.0/s Avg:   251 Min:   102 Max: 67615 Err:     1 (0.00%)
+2025-11-13 17:58:30,025 INFO o.a.j.r.Summariser: summary +    587 in 00:00:30 =   19.6/s Avg:   105 Min:   103 Max:   135 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:58:30,026 INFO o.a.j.r.Summariser: summary =  53131 in 00:46:33 =   19.0/s Avg:   250 Min:   102 Max: 67615 Err:     1 (0.00%)
+2025-11-13 17:59:00,042 INFO o.a.j.r.Summariser: summary +    582 in 00:00:30 =   19.4/s Avg:   105 Min:   103 Max:   207 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:59:00,043 INFO o.a.j.r.Summariser: summary =  53713 in 00:47:03 =   19.0/s Avg:   248 Min:   102 Max: 67615 Err:     1 (0.00%)
+2025-11-13 17:59:30,100 INFO o.a.j.r.Summariser: summary +    586 in 00:00:30 =   19.5/s Avg:   105 Min:   103 Max:   118 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 17:59:30,101 INFO o.a.j.r.Summariser: summary =  54299 in 00:47:33 =   19.0/s Avg:   246 Min:   102 Max: 67615 Err:     1 (0.00%)
+2025-11-13 18:00:00,028 INFO o.a.j.r.Summariser: summary +    579 in 00:00:30 =   19.3/s Avg:   106 Min:   103 Max:   207 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 18:00:00,029 INFO o.a.j.r.Summariser: summary =  54878 in 00:48:03 =   19.0/s Avg:   245 Min:   102 Max: 67615 Err:     1 (0.00%)
+2025-11-13 18:00:30,001 INFO o.a.j.r.Summariser: summary +    587 in 00:00:30 =   19.6/s Avg:   107 Min:   103 Max:   318 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 18:00:30,003 INFO o.a.j.r.Summariser: summary =  55465 in 00:48:33 =   19.0/s Avg:   244 Min:   102 Max: 67615 Err:     1 (0.00%)
+2025-11-13 18:01:00,035 INFO o.a.j.r.Summariser: summary +    585 in 00:00:30 =   19.5/s Avg:   110 Min:   103 Max:   719 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 18:01:00,035 INFO o.a.j.r.Summariser: summary =  56050 in 00:49:03 =   19.0/s Avg:   242 Min:   102 Max: 67615 Err:     1 (0.00%)
+2025-11-13 18:01:30,657 INFO o.a.j.r.Summariser: summary +    537 in 00:00:31 =   17.5/s Avg:   121 Min:   102 Max:  3279 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 18:01:30,658 INFO o.a.j.r.Summariser: summary =  56587 in 00:49:34 =   19.0/s Avg:   241 Min:   102 Max: 67615 Err:     1 (0.00%)
+2025-11-13 18:01:31,024 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 5 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:01:32,120 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 9 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:01:33,090 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 12 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:01:34,065 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 8 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:01:35,065 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 15 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:01:36,069 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 17 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:01:37,036 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 10 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:01:38,068 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 12 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:01:39,031 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 18 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:01:40,002 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 17 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:01:41,121 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 16 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:01:42,009 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 10 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:01:43,049 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 15 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:01:44,087 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 9 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:01:45,039 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 12 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:01:46,010 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 17 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:01:47,068 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 14 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:01:48,026 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 17 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:01:49,103 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 14 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:01:50,075 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 13 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:01:51,080 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 14 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:01:52,439 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 6 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:01:53,038 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 8 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:01:54,048 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 9 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:01:55,037 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 14 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:01:56,065 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 11 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:01:57,077 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 16 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:01:58,029 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 8 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:01:59,005 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 11 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:02:00,012 INFO o.a.j.r.Summariser: summary +    367 in 00:00:29 =   12.5/s Avg:  3775 Min:   141 Max: 19858 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 18:02:00,012 INFO o.a.j.r.Summariser: summary =  56954 in 00:50:03 =   19.0/s Avg:   264 Min:   102 Max: 67615 Err:     1 (0.00%)
+2025-11-13 18:02:00,012 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 10 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:02:01,008 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 10 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:02:02,036 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 15 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:02:03,045 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 12 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:02:04,058 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 9 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:02:05,058 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 14 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:02:06,066 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 9 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:02:07,071 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 12 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:02:08,084 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 11 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:02:09,095 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 7 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:02:10,103 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 7 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:02:11,126 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 13 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:02:12,004 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 13 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:02:13,167 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 14 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:02:14,017 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 8 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:02:15,021 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 14 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:02:16,003 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 12 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:02:17,018 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 10 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:02:18,003 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 12 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:02:19,031 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 12 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:02:20,014 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 10 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:02:21,036 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 11 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:02:22,039 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 13 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:02:23,061 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 10 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:02:24,012 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 19 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:02:25,097 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 14 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:02:26,102 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 10 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:02:27,023 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 10 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:02:30,016 INFO o.a.j.r.Summariser: summary +    418 in 00:00:30 =   13.9/s Avg:  3740 Min:   103 Max: 28820 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 18:02:30,016 INFO o.a.j.r.Summariser: summary =  57372 in 00:50:33 =   18.9/s Avg:   289 Min:   102 Max: 67615 Err:     1 (0.00%)
+2025-11-13 18:03:00,065 INFO o.a.j.r.Summariser: summary +    587 in 00:00:30 =   19.5/s Avg:   106 Min:   102 Max:   423 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 18:03:00,066 INFO o.a.j.r.Summariser: summary =  57959 in 00:51:03 =   18.9/s Avg:   287 Min:   102 Max: 67615 Err:     1 (0.00%)
+2025-11-13 18:03:30,006 INFO o.a.j.r.Summariser: summary +    584 in 00:00:30 =   19.5/s Avg:   120 Min:   102 Max:   455 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 18:03:30,008 INFO o.a.j.r.Summariser: summary =  58543 in 00:51:33 =   18.9/s Avg:   286 Min:   102 Max: 67615 Err:     1 (0.00%)
+2025-11-13 18:04:00,066 INFO o.a.j.r.Summariser: summary +    592 in 00:00:30 =   19.7/s Avg:   158 Min:   103 Max:   359 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 18:04:00,066 INFO o.a.j.r.Summariser: summary =  59135 in 00:52:03 =   18.9/s Avg:   284 Min:   102 Max: 67615 Err:     1 (0.00%)
+2025-11-13 18:04:30,034 INFO o.a.j.r.Summariser: summary +    585 in 00:00:30 =   19.5/s Avg:   109 Min:   102 Max:   316 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 18:04:30,035 INFO o.a.j.r.Summariser: summary =  59720 in 00:52:33 =   18.9/s Avg:   283 Min:   102 Max: 67615 Err:     1 (0.00%)
+2025-11-13 18:05:00,043 INFO o.a.j.r.Summariser: summary +    589 in 00:00:30 =   19.6/s Avg:   108 Min:   103 Max:   223 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 18:05:00,044 INFO o.a.j.r.Summariser: summary =  60309 in 00:53:03 =   18.9/s Avg:   281 Min:   102 Max: 67615 Err:     1 (0.00%)
+2025-11-13 18:05:27,586 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 12 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:05:28,113 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 5 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:05:29,135 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 8 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:05:30,013 INFO o.a.j.r.Summariser: summary +    494 in 00:00:30 =   16.5/s Avg:   195 Min:   102 Max:  5571 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 18:05:30,014 INFO o.a.j.r.Summariser: summary =  60803 in 00:53:33 =   18.9/s Avg:   280 Min:   102 Max: 67615 Err:     1 (0.00%)
+2025-11-13 18:05:30,014 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 12 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:05:31,059 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 11 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:05:32,165 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 11 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:05:33,329 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 10 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:05:34,007 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 8 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:05:35,150 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 11 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:05:36,023 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 12 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:05:37,017 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 4 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:05:38,011 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 7 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:05:39,214 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 5 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:05:40,018 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 8 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:05:41,033 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 11 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:05:42,057 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 12 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:05:43,091 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 8 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:05:44,016 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 12 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:05:45,134 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 13 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:05:46,038 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 8 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:05:47,105 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 6 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:05:48,402 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 8 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:05:49,018 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 7 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:05:50,011 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 14 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:05:51,096 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 8 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:05:52,029 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 6 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:05:53,044 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 10 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:05:54,013 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 8 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:05:55,013 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 9 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:05:56,004 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 12 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:05:57,560 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 9 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:05:58,143 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 6 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:05:59,070 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 9 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:06:00,068 INFO o.a.j.r.Summariser: summary +    267 in 00:00:30 =    8.9/s Avg:  5418 Min:   166 Max: 30174 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 18:06:00,068 INFO o.a.j.r.Summariser: summary =  61070 in 00:54:03 =   18.8/s Avg:   303 Min:   102 Max: 67615 Err:     1 (0.00%)
+2025-11-13 18:06:00,068 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 4 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:06:01,023 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 9 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:06:02,530 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 5 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:06:03,175 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 6 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:06:04,169 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 7 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:06:05,029 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 8 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:06:06,121 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 6 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:06:07,110 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 7 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:06:08,080 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 4 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:06:09,105 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 7 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:06:10,270 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 8 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:06:11,080 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 3 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:06:12,103 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 13 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:06:13,046 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 10 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:06:14,159 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 14 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:06:15,011 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 7 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:06:16,307 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 7 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:06:17,127 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 3 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:06:18,300 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 7 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:06:19,003 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 5 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:06:20,070 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 5 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:06:21,140 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 8 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:06:22,120 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 8 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:06:23,104 WARN k.a.j.t.VariableThroughputTimer: No free threads available in current Thread Group UsuariosVirtuales, made 8 samples/s for expected rps 20.0 samples/s, increase your number of threads
+2025-11-13 18:06:30,039 INFO o.a.j.r.Summariser: summary +    351 in 00:00:30 =   11.7/s Avg:  4240 Min:   102 Max: 42403 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 18:06:30,039 INFO o.a.j.r.Summariser: summary =  61421 in 00:54:33 =   18.8/s Avg:   325 Min:   102 Max: 67615 Err:     1 (0.00%)
+2025-11-13 18:07:00,011 INFO o.a.j.r.Summariser: summary +    585 in 00:00:30 =   19.5/s Avg:   109 Min:   102 Max:   925 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 18:07:00,011 INFO o.a.j.r.Summariser: summary =  62006 in 00:55:03 =   18.8/s Avg:   323 Min:   102 Max: 67615 Err:     1 (0.00%)
+2025-11-13 18:07:30,025 INFO o.a.j.r.Summariser: summary +    585 in 00:00:30 =   19.5/s Avg:   110 Min:   102 Max:   424 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 18:07:30,026 INFO o.a.j.r.Summariser: summary =  62591 in 00:55:33 =   18.8/s Avg:   321 Min:   102 Max: 67615 Err:     1 (0.00%)
+2025-11-13 18:08:00,032 INFO o.a.j.r.Summariser: summary +    584 in 00:00:30 =   19.5/s Avg:   117 Min:   102 Max:   987 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 18:08:00,033 INFO o.a.j.r.Summariser: summary =  63175 in 00:56:03 =   18.8/s Avg:   319 Min:   102 Max: 67615 Err:     1 (0.00%)
+2025-11-13 18:08:30,092 INFO o.a.j.r.Summariser: summary +    585 in 00:00:30 =   19.5/s Avg:   107 Min:   102 Max:   176 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 18:08:30,093 INFO o.a.j.r.Summariser: summary =  63760 in 00:56:33 =   18.8/s Avg:   317 Min:   102 Max: 67615 Err:     1 (0.00%)
+2025-11-13 18:09:00,067 INFO o.a.j.r.Summariser: summary +    584 in 00:00:30 =   19.5/s Avg:   111 Min:   102 Max:   149 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 18:09:00,069 INFO o.a.j.r.Summariser: summary =  64344 in 00:57:03 =   18.8/s Avg:   315 Min:   102 Max: 67615 Err:     1 (0.00%)
+2025-11-13 18:09:30,072 INFO o.a.j.r.Summariser: summary +    583 in 00:00:30 =   19.4/s Avg:   113 Min:   102 Max:   579 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 18:09:30,073 INFO o.a.j.r.Summariser: summary =  64927 in 00:57:33 =   18.8/s Avg:   314 Min:   102 Max: 67615 Err:     1 (0.00%)
+2025-11-13 18:10:00,001 INFO o.a.j.r.Summariser: summary +    585 in 00:00:30 =   19.5/s Avg:   106 Min:   102 Max:   178 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-11-13 18:10:00,002 INFO o.a.j.r.Summariser: summary =  65512 in 00:58:03 =   18.8/s Avg:   312 Min:   102 Max: 67615 Err:     1 (0.00%)
+2025-11-13 18:10:28,043 INFO o.a.j.r.ResultCollector: Shutdown hook started
+2025-11-13 18:10:28,044 INFO o.a.j.r.ResultCollector: Shutdown hook ended

@@ -1,0 +1,679 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6.3">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Venta_Escalabilidad">
+      <boolProp name="TestPlan.functional_mode">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">true</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+    </TestPlan>
+    <hashTree>
+      <com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup guiclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroupGui" testclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup" testname="UsuariosVirtuales">
+        <elementProp name="ThreadGroup.main_controller" elementType="com.blazemeter.jmeter.control.VirtualUserController"/>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <stringProp name="TargetLevel">${__tstFeedback(EscenarioPrueba,50,200,100)}</stringProp>
+        <stringProp name="RampUp"></stringProp>
+        <stringProp name="Steps"></stringProp>
+        <stringProp name="Hold">86400</stringProp>
+        <stringProp name="LogFilename"></stringProp>
+        <stringProp name="Iterations"></stringProp>
+        <stringProp name="Unit">S</stringProp>
+        <boolProp name="same_user_on_next_iteration">true</boolProp>
+      </com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup>
+      <hashTree>
+        <kg.apc.jmeter.timers.VariableThroughputTimer guiclass="kg.apc.jmeter.timers.VariableThroughputTimerGui" testclass="kg.apc.jmeter.timers.VariableThroughputTimer" testname="EscenarioPrueba-Carga">
+          <collectionProp name="load_profile">
+            <collectionProp name="-213617984">
+              <stringProp name="1603">25</stringProp>
+              <stringProp name="1603">25</stringProp>
+              <stringProp name="1722">60</stringProp>
+            </collectionProp>
+            <collectionProp name="-203363680">
+              <stringProp name="1691">50</stringProp>
+              <stringProp name="1691">50</stringProp>
+              <stringProp name="1722">60</stringProp>
+            </collectionProp>
+            <collectionProp name="546599556">
+              <stringProp name="48625">100</stringProp>
+              <stringProp name="48625">100</stringProp>
+              <stringProp name="60">60</stringProp>
+            </collectionProp>
+            <collectionProp name="588669284">
+              <stringProp name="48780">150</stringProp>
+              <stringProp name="48780">150</stringProp>
+              <stringProp name="60">60</stringProp>
+            </collectionProp>
+            <collectionProp name="1612592836">
+              <stringProp name="49586">200</stringProp>
+              <stringProp name="49586">200</stringProp>
+              <stringProp name="60">60</stringProp>
+            </collectionProp>
+          </collectionProp>
+        </kg.apc.jmeter.timers.VariableThroughputTimer>
+        <hashTree/>
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Reporte">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+          <boolProp name="useGroupName">true</boolProp>
+        </ResultCollector>
+        <hashTree/>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="VariablesEntorno">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="server-local-name" elementType="Argument">
+              <stringProp name="Argument.name">server-local-name</stringProp>
+              <stringProp name="Argument.value">54.161.80.16</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="server-local-port" elementType="Argument">
+              <stringProp name="Argument.name">server-local-port</stringProp>
+              <stringProp name="Argument.value">80</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="server-local-protocol" elementType="Argument">
+              <stringProp name="Argument.name">server-local-protocol</stringProp>
+              <stringProp name="Argument.value">http</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="server-dev-name" elementType="Argument">
+              <stringProp name="Argument.name">server-dev-name</stringProp>
+              <stringProp name="Argument.value">dev-bo-ms-gateway.codesa.com.co</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="server-dev-port" elementType="Argument">
+              <stringProp name="Argument.name">server-dev-port</stringProp>
+              <stringProp name="Argument.value">443</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="server-dev-protocol" elementType="Argument">
+              <stringProp name="Argument.name">server-dev-protocol</stringProp>
+              <stringProp name="Argument.value">https</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="server-test-name" elementType="Argument">
+              <stringProp name="Argument.name">server-test-name</stringProp>
+              <stringProp name="Argument.value">54.161.80.16</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="server-test-port" elementType="Argument">
+              <stringProp name="Argument.name">server-test-port</stringProp>
+              <stringProp name="Argument.value">8080</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="server-test-protocol" elementType="Argument">
+              <stringProp name="Argument.name">server-test-protocol</stringProp>
+              <stringProp name="Argument.value">http</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="token" elementType="Argument">
+              <stringProp name="Argument.name">token</stringProp>
+              <stringProp name="Argument.value">eyJhbGciOiJIUzUxMiJ9.eyJhcGVsbGlkb3MiOiJXIEFSRU5BIiwicm9sSWQiOjEsInBhbnRhbGxhcyI6W3sicGFudGFsbGFJZCI6MSwicGFudGFsbGFDb2RpZ28iOiJJTklDSU8iLCJwYW50YWxsYVRpdHVsbyI6IkluaWNpbyIsInBhbnRhbGxhVXJsIjoiaG9tZSIsInBhbnRhbGxhRGVzY3JpcGNpb24iOiJObyIsInBhbnRhbGxhSWNvbm8iOiJmYS1ob21lIn0seyJwYW50YWxsYUlkIjoyLCJwYW50YWxsYUNvZGlnbyI6IlBFUlNPTkFTIiwicGFudGFsbGFUaXR1bG8iOiJQZXJzb25hcyIsInBhbnRhbGxhVXJsIjoicGVyc29uYXMiLCJwYW50YWxsYURlc2NyaXBjaW9uIjoiTm8iLCJwYW50YWxsYUljb25vIjoiZmEtdXNlcnMifSx7InBhbnRhbGxhSWQiOjMsInBhbnRhbGxhQ29kaWdvIjoiRVNDRU5BUklPUyIsInBhbnRhbGxhVGl0dWxvIjoiRXNjZW5hcmlvcyIsInBhbnRhbGxhVXJsIjoiZXNjZW5hcmlvcyIsInBhbnRhbGxhRGVzY3JpcGNpb24iOiJObyIsInBhbnRhbGxhSWNvbm8iOiJmYS11bml2ZXJzaXR5In0seyJwYW50YWxsYUlkIjo0LCJwYW50YWxsYUNvZGlnbyI6IkVWRU5UT1MiLCJwYW50YWxsYVRpdHVsbyI6IkV2ZW50b3MiLCJwYW50YWxsYVVybCI6ImV2ZW50b3MiLCJwYW50YWxsYURlc2NyaXBjaW9uIjoiTm8iLCJwYW50YWxsYUljb25vIjoiZmEtdGFnIn0seyJwYW50YWxsYUlkIjo1LCJwYW50YWxsYUNvZGlnbyI6IkFCT05PUyIsInBhbnRhbGxhVGl0dWxvIjoiQWJvbm9zIiwicGFudGFsbGFVcmwiOiJhYm9uYWRvcyIsInBhbnRhbGxhRGVzY3JpcGNpb24iOiJObyIsInBhbnRhbGxhSWNvbm8iOiJmYS10YWdzIn0seyJwYW50YWxsYUlkIjo2LCJwYW50YWxsYUNvZGlnbyI6IlBBUkFNRVRST1MiLCJwYW50YWxsYVRpdHVsbyI6IlBhcsOhbWV0cm9zIiwicGFudGFsbGFVcmwiOiJwYXJhbWV0cm9zIiwicGFudGFsbGFEZXNjcmlwY2lvbiI6Ik5vIiwicGFudGFsbGFJY29ubyI6ImZhLWN1YmVzIn0seyJwYW50YWxsYUlkIjo3LCJwYW50YWxsYUNvZGlnbyI6IkNPUlRFU0lBUyIsInBhbnRhbGxhVGl0dWxvIjoiQ29ydGVzw61hcyIsInBhbnRhbGxhVXJsIjoiY29ydGVzaWFzIiwicGFudGFsbGFEZXNjcmlwY2lvbiI6Ik5vIiwicGFudGFsbGFJY29ubyI6ImZhLWdpZnQifSx7InBhbnRhbGxhSWQiOjgsInBhbnRhbGxhQ29kaWdvIjoiR0VTVElPTiBERSBDT1JURVNJQVMiLCJwYW50YWxsYVRpdHVsbyI6Ikdlc3Rpw7NuIGRlIGNvcnRlc8OtYXMiLCJwYW50YWxsYVVybCI6Ikdlc3Rpb24gZGUgY29ydGVzaWFzIiwicGFudGFsbGFEZXNjcmlwY2lvbiI6Ik5vIiwicGFudGFsbGFJY29ubyI6ImZhLWJvb2sifSx7InBhbnRhbGxhSWQiOjksInBhbnRhbGxhQ29kaWdvIjoiR0VORVJBUiBDT1JURVNJQVMiLCJwYW50YWxsYVRpdHVsbyI6IkdlbmVyYXIgY29ydGVzw61hcyIsInBhbnRhbGxhVXJsIjoiQ2FyZ3VlIGRlIGNvcnRlc2lhcyIsInBhbnRhbGxhRGVzY3JpcGNpb24iOiJObyIsInBhbnRhbGxhSWNvbm8iOiJmYS1naWZ0In0seyJwYW50YWxsYUlkIjoxMCwicGFudGFsbGFDb2RpZ28iOiJBUkNISVZPUyIsInBhbnRhbGxhVGl0dWxvIjoiQ2FyZ3VlIGRlIGFyY2hpdm9zIiwicGFudGFsbGFVcmwiOiJhcmNoaXZvcyIsInBhbnRhbGxhRGVzY3JpcGNpb24iOiJObyIsInBhbnRhbGxhSWNvbm8iOiJmYS1hcmNoaXZlIn0seyJwYW50YWxsYUlkIjoxMSwicGFudGFsbGFDb2RpZ28iOiJDQVJHVUUgREUgUEVSU09OQVMiLCJwYW50YWxsYVRpdHVsbyI6IkNhcmd1ZSBkZSBwZXJzb25hcyIsInBhbnRhbGxhVXJsIjoiQ2FyZ3VlIGRlIHBlcnNvbmFzIiwicGFudGFsbGFEZXNjcmlwY2lvbiI6Ik5vIiwicGFudGFsbGFJY29ubyI6ImZhLWFyY2hpdmUifSx7InBhbnRhbGxhSWQiOjEyLCJwYW50YWxsYUNvZGlnbyI6IkNBUkdVRSBERSBCT0xFVEFTIiwicGFudGFsbGFUaXR1bG8iOiJDYXJndWUgZGUgYm9sZXRhcyIsInBhbnRhbGxhVXJsIjoiQ2FyZ3VlIGRlIGJvbGV0YXMiLCJwYW50YWxsYURlc2NyaXBjaW9uIjoiTm8iLCJwYW50YWxsYUljb25vIjoiZmEtYXJjaGl2ZSJ9LHsicGFudGFsbGFJZCI6MTMsInBhbnRhbGxhQ29kaWdvIjoiUkVQT1JURVMiLCJwYW50YWxsYVRpdHVsbyI6IlJlcG9ydGVzIiwicGFudGFsbGFVcmwiOiJyZXBvcnRlcyIsInBhbnRhbGxhRGVzY3JpcGNpb24iOiJObyIsInBhbnRhbGxhSWNvbm8iOiJmYS10YXNrcyJ9LHsicGFudGFsbGFJZCI6MTQsInBhbnRhbGxhQ29kaWdvIjoiUkVQT1JURVMgREUgSU5HUkVTTyIsInBhbnRhbGxhVGl0dWxvIjoiUmVwb3J0ZXMgZGUgaW5ncmVzbyIsInBhbnRhbGxhVXJsIjoiUmVwb3J0ZXMgZGUgaW5ncmVzbyIsInBhbnRhbGxhRGVzY3JpcGNpb24iOiJObyIsInBhbnRhbGxhSWNvbm8iOiJmYS10YXNrcyJ9LHsicGFudGFsbGFJZCI6MTUsInBhbnRhbGxhQ29kaWdvIjoiUkVQT1JURVMgREUgSU5URUdSQUNJT04iLCJwYW50YWxsYVRpdHVsbyI6IlJlcG9ydGVzIGRlIGludGVncmFjacOzbiIsInBhbnRhbGxhVXJsIjoiUmVwb3J0ZXMgZGUgaW50ZWdyYWNpb24iLCJwYW50YWxsYURlc2NyaXBjaW9uIjoiTm8iLCJwYW50YWxsYUljb25vIjoiZmEtdGFza3MifSx7InBhbnRhbGxhSWQiOjE3LCJwYW50YWxsYUNvZGlnbyI6IlJFUE9SVEVTIERFIFZFTlRBIiwicGFudGFsbGFUaXR1bG8iOiJSZXBvcnRlcyBkZSB2ZW50YSIsInBhbnRhbGxhVXJsIjoiUmVwb3J0ZXMgZGUgdmVudGEiLCJwYW50YWxsYURlc2NyaXBjaW9uIjoiTm8iLCJwYW50YWxsYUljb25vIjoiZmEtdGFza3MifSx7InBhbnRhbGxhSWQiOjI4LCJwYW50YWxsYUNvZGlnbyI6IkFVRElUT1JJQSIsInBhbnRhbGxhVGl0dWxvIjoiQXVkaXRvcmlhIiwicGFudGFsbGFVcmwiOiJhdWRpdG9yaWEiLCJwYW50YWxsYURlc2NyaXBjaW9uIjoiTm8iLCJwYW50YWxsYUljb25vIjoiZmEtbGlzdC1hbHQifSx7InBhbnRhbGxhSWQiOjI5LCJwYW50YWxsYUNvZGlnbyI6IkFDVFVBTElaQVIgQ09OVFJBU0XDkUFTIiwicGFudGFsbGFUaXR1bG8iOiJBY3R1YWxpemFyIGNvbnRyYXNlw7FhcyIsInBhbnRhbGxhVXJsIjoiQWN0dWFsaXphciBjb250cmFzZW5hcyIsInBhbnRhbGxhRGVzY3JpcGNpb24iOiJObyIsInBhbnRhbGxhSWNvbm8iOiIifSx7InBhbnRhbGxhSWQiOjMxLCJwYW50YWxsYUNvZGlnbyI6IlNBSSIsInBhbnRhbGxhVGl0dWxvIjoiU2FpIiwicGFudGFsbGFVcmwiOiJzYWkiLCJwYW50YWxsYURlc2NyaXBjaW9uIjoiTm8iLCJwYW50YWxsYUljb25vIjoiZmEtdXNlcnMifSx7InBhbnRhbGxhSWQiOjMzLCJwYW50YWxsYUNvZGlnbyI6IlZJU1VBTElaQVIgUElOIiwicGFudGFsbGFUaXR1bG8iOiJWaXN1YWxpemFyIHRvZG8gZWwgcGluIiwicGFudGFsbGFVcmwiOiJ2aXN1YWxpemFyIHBpbiIsInBhbnRhbGxhRGVzY3JpcGNpb24iOiJObyIsInBhbnRhbGxhSWNvbm8iOiJmYS1zaGFyZSJ9LHsicGFudGFsbGFJZCI6MzIsInBhbnRhbGxhQ29kaWdvIjoiUkVFTlZJTyBERSBQSU5FUyIsInBhbnRhbGxhVGl0dWxvIjoiUmVlbnZpYXIgcGluIiwicGFudGFsbGFVcmwiOiJyZWVudmlhciBwaW4iLCJwYW50YWxsYURlc2NyaXBjaW9uIjoiTm8iLCJwYW50YWxsYUljb25vIjoiZmEtc2hhcmUifV0sIm5pdCI6IjkwMTMwNDk1Mi0wIiwiZXhwIjoxNjg2Mzc4MTg3LCJub21icmUiOiJFTVBSRVNBIiwiaWF0IjoxNjg2MzE4MTg3LCJrZXkiOjAsInJvbE5vbWJyZSI6IlNVUEVSQURNSU4iLCJ1c2VybmFtZSI6IldBUkVOQSJ9._YazbcFQWLIPGrcQPS68Pce0K0pDkx7ri-VTI6slVj0FDWOl9dHjBJ8eraAbMxDRXq6dkqNAr6d1NmxSRQh3ug</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="server-prod-name" elementType="Argument">
+              <stringProp name="Argument.name">server-prod-name</stringProp>
+              <stringProp name="Argument.value">gateway.warena.co</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="server-prod-port" elementType="Argument">
+              <stringProp name="Argument.name">server-prod-port</stringProp>
+              <stringProp name="Argument.value">443</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="server-prod-protocol" elementType="Argument">
+              <stringProp name="Argument.name">server-prod-protocol</stringProp>
+              <stringProp name="Argument.value">https</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="server-uat-name" elementType="Argument">
+              <stringProp name="Argument.name">server-uat-name</stringProp>
+              <stringProp name="Argument.value">uat-bo-ms-gateway.codesa.com.co</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="server-uat-port" elementType="Argument">
+              <stringProp name="Argument.name">server-uat-port</stringProp>
+              <stringProp name="Argument.value">443</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="server-uat-protocol" elementType="Argument">
+              <stringProp name="Argument.name">server-uat-protocol</stringProp>
+              <stringProp name="Argument.value">https</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="ID_Base" elementType="Argument">
+              <stringProp name="Argument.name">ID_Base</stringProp>
+              <stringProp name="Argument.value">6744</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="Request&amp;Response">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.ResponseTimesOverTimeGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="TiempoRespuesta">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+          <longProp name="interval_grouping">500</longProp>
+          <boolProp name="graph_aggregated">false</boolProp>
+          <stringProp name="include_sample_labels"></stringProp>
+          <stringProp name="exclude_sample_labels"></stringProp>
+          <stringProp name="start_offset"></stringProp>
+          <stringProp name="end_offset"></stringProp>
+          <boolProp name="include_checkbox_state">false</boolProp>
+          <boolProp name="exclude_checkbox_state">false</boolProp>
+        </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
+        <hashTree/>
+        <JDBCDataSource guiclass="TestBeanGUI" testclass="JDBCDataSource" testname="JDBC Connection Configuration" enabled="false">
+          <stringProp name="dataSource">PoolPositions</stringProp>
+          <stringProp name="poolMax">20</stringProp>
+          <stringProp name="timeout">10000</stringProp>
+          <stringProp name="trimInterval">60000</stringProp>
+          <boolProp name="autocommit">true</boolProp>
+          <stringProp name="transactionIsolation">DEFAULT</stringProp>
+          <boolProp name="preinit">false</boolProp>
+          <stringProp name="initQuery"></stringProp>
+          <boolProp name="keepAlive">true</boolProp>
+          <stringProp name="connectionAge">5000</stringProp>
+          <stringProp name="checkQuery"></stringProp>
+          <stringProp name="dbUrl">jdbc:postgresql://100.26.104.157:5433/traccar_db2</stringProp>
+          <stringProp name="driver">org.postgresql.Driver</stringProp>
+          <stringProp name="username">postgres</stringProp>
+          <stringProp name="password">cesar</stringProp>
+          <stringProp name="connectionProperties"></stringProp>
+        </JDBCDataSource>
+        <hashTree/>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="JDBC Inter tabla Events" enabled="false">
+          <stringProp name="dataSource">PoolPositions</stringProp>
+          <stringProp name="queryType">Update Statement</stringProp>
+          <stringProp name="query">INSERT INTO public.tc_events (
+    -- Campos Requeridos (NOT NULL)
+    &quot;type&quot;,
+    eventtime,
+    
+    -- Campos Opcionales (NULL) o de Referencia
+    deviceid,
+    positionid,
+    geofenceid,
+    &quot;attributes&quot;
+)
+VALUES (
+    -- &quot;type&quot; (VARCHAR): Requerido. Tipos comunes: geofenceEnter, alarm, ignitionOn, deviceOffline.
+    &apos;geofenceEnter&apos;, 
+
+    -- eventtime (TIMESTAMP): Requerido. El momento en que ocurrió el evento.
+    now(), 
+
+    -- deviceid (INT4): Opcional (pero recomendado). ID del dispositivo que generó el evento.
+    100, 
+
+    -- positionid (INT4): Opcional. ID de la posición asociada (si el evento se basa en una posición).
+    45678, 
+
+    -- geofenceid (INT4): Opcional. ID de la geocerca (si el tipo es geofenceEnter/geofenceExit).
+    10, 
+
+    -- &quot;attributes&quot; (VARCHAR): Opcional. Metadatos adicionales en formato JSON.
+    &apos;{&quot;alertType&quot;: &quot;priority&quot;, &quot;velocity&quot;: 65.2}&apos;
+),
+(
+    -- &quot;type&quot; (VARCHAR): Requerido. Tipos comunes: geofenceEnter, alarm, ignitionOn, deviceOffline.
+    &apos;geofenceEnter&apos;, 
+
+    -- eventtime (TIMESTAMP): Requerido. El momento en que ocurrió el evento.
+    now(), 
+
+    -- deviceid (INT4): Opcional (pero recomendado). ID del dispositivo que generó el evento.
+    100, 
+
+    -- positionid (INT4): Opcional. ID de la posición asociada (si el evento se basa en una posición).
+    45678, 
+
+    -- geofenceid (INT4): Opcional. ID de la geocerca (si el tipo es geofenceEnter/geofenceExit).
+    10, 
+
+    -- &quot;attributes&quot; (VARCHAR): Opcional. Metadatos adicionales en formato JSON.
+    &apos;{&quot;alertType&quot;: &quot;priority&quot;, &quot;velocity&quot;: 65.2}&apos;
+),
+(
+    -- &quot;type&quot; (VARCHAR): Requerido. Tipos comunes: geofenceEnter, alarm, ignitionOn, deviceOffline.
+    &apos;geofenceEnter&apos;, 
+
+    -- eventtime (TIMESTAMP): Requerido. El momento en que ocurrió el evento.
+    now(), 
+
+    -- deviceid (INT4): Opcional (pero recomendado). ID del dispositivo que generó el evento.
+    100, 
+
+    -- positionid (INT4): Opcional. ID de la posición asociada (si el evento se basa en una posición).
+    45678, 
+
+    -- geofenceid (INT4): Opcional. ID de la geocerca (si el tipo es geofenceEnter/geofenceExit).
+    10, 
+
+    -- &quot;attributes&quot; (VARCHAR): Opcional. Metadatos adicionales en formato JSON.
+    &apos;{&quot;alertType&quot;: &quot;priority&quot;, &quot;velocity&quot;: 65.2}&apos;
+),
+(
+    -- &quot;type&quot; (VARCHAR): Requerido. Tipos comunes: geofenceEnter, alarm, ignitionOn, deviceOffline.
+    &apos;geofenceEnter&apos;, 
+
+    -- eventtime (TIMESTAMP): Requerido. El momento en que ocurrió el evento.
+    now(), 
+
+    -- deviceid (INT4): Opcional (pero recomendado). ID del dispositivo que generó el evento.
+    100, 
+
+    -- positionid (INT4): Opcional. ID de la posición asociada (si el evento se basa en una posición).
+    45678, 
+
+    -- geofenceid (INT4): Opcional. ID de la geocerca (si el tipo es geofenceEnter/geofenceExit).
+    10, 
+
+    -- &quot;attributes&quot; (VARCHAR): Opcional. Metadatos adicionales en formato JSON.
+    &apos;{&quot;alertType&quot;: &quot;priority&quot;, &quot;velocity&quot;: 65.2}&apos;
+),
+(
+    -- &quot;type&quot; (VARCHAR): Requerido. Tipos comunes: geofenceEnter, alarm, ignitionOn, deviceOffline.
+    &apos;geofenceEnter&apos;, 
+
+    -- eventtime (TIMESTAMP): Requerido. El momento en que ocurrió el evento.
+    now(), 
+
+    -- deviceid (INT4): Opcional (pero recomendado). ID del dispositivo que generó el evento.
+    100, 
+
+    -- positionid (INT4): Opcional. ID de la posición asociada (si el evento se basa en una posición).
+    45678, 
+
+    -- geofenceid (INT4): Opcional. ID de la geocerca (si el tipo es geofenceEnter/geofenceExit).
+    10, 
+
+    -- &quot;attributes&quot; (VARCHAR): Opcional. Metadatos adicionales en formato JSON.
+    &apos;{&quot;alertType&quot;: &quot;priority&quot;, &quot;velocity&quot;: 65.2}&apos;
+),
+(
+    -- &quot;type&quot; (VARCHAR): Requerido. Tipos comunes: geofenceEnter, alarm, ignitionOn, deviceOffline.
+    &apos;geofenceEnter&apos;, 
+
+    -- eventtime (TIMESTAMP): Requerido. El momento en que ocurrió el evento.
+    now(), 
+
+    -- deviceid (INT4): Opcional (pero recomendado). ID del dispositivo que generó el evento.
+    100, 
+
+    -- positionid (INT4): Opcional. ID de la posición asociada (si el evento se basa en una posición).
+    45678, 
+
+    -- geofenceid (INT4): Opcional. ID de la geocerca (si el tipo es geofenceEnter/geofenceExit).
+    10, 
+
+    -- &quot;attributes&quot; (VARCHAR): Opcional. Metadatos adicionales en formato JSON.
+    &apos;{&quot;alertType&quot;: &quot;priority&quot;, &quot;velocity&quot;: 65.2}&apos;
+),
+(
+    -- &quot;type&quot; (VARCHAR): Requerido. Tipos comunes: geofenceEnter, alarm, ignitionOn, deviceOffline.
+    &apos;geofenceEnter&apos;, 
+
+    -- eventtime (TIMESTAMP): Requerido. El momento en que ocurrió el evento.
+    now(), 
+
+    -- deviceid (INT4): Opcional (pero recomendado). ID del dispositivo que generó el evento.
+    100, 
+
+    -- positionid (INT4): Opcional. ID de la posición asociada (si el evento se basa en una posición).
+    45678, 
+
+    -- geofenceid (INT4): Opcional. ID de la geocerca (si el tipo es geofenceEnter/geofenceExit).
+    10, 
+
+    -- &quot;attributes&quot; (VARCHAR): Opcional. Metadatos adicionales en formato JSON.
+    &apos;{&quot;alertType&quot;: &quot;priority&quot;, &quot;velocity&quot;: 65.2}&apos;
+),
+(
+    -- &quot;type&quot; (VARCHAR): Requerido. Tipos comunes: geofenceEnter, alarm, ignitionOn, deviceOffline.
+    &apos;geofenceEnter&apos;, 
+
+    -- eventtime (TIMESTAMP): Requerido. El momento en que ocurrió el evento.
+    now(), 
+
+    -- deviceid (INT4): Opcional (pero recomendado). ID del dispositivo que generó el evento.
+    100, 
+
+    -- positionid (INT4): Opcional. ID de la posición asociada (si el evento se basa en una posición).
+    45678, 
+
+    -- geofenceid (INT4): Opcional. ID de la geocerca (si el tipo es geofenceEnter/geofenceExit).
+    10, 
+
+    -- &quot;attributes&quot; (VARCHAR): Opcional. Metadatos adicionales en formato JSON.
+    &apos;{&quot;alertType&quot;: &quot;priority&quot;, &quot;velocity&quot;: 65.2}&apos;
+),
+(
+    -- &quot;type&quot; (VARCHAR): Requerido. Tipos comunes: geofenceEnter, alarm, ignitionOn, deviceOffline.
+    &apos;geofenceEnter&apos;, 
+
+    -- eventtime (TIMESTAMP): Requerido. El momento en que ocurrió el evento.
+    now(), 
+
+    -- deviceid (INT4): Opcional (pero recomendado). ID del dispositivo que generó el evento.
+    100, 
+
+    -- positionid (INT4): Opcional. ID de la posición asociada (si el evento se basa en una posición).
+    45678, 
+
+    -- geofenceid (INT4): Opcional. ID de la geocerca (si el tipo es geofenceEnter/geofenceExit).
+    10, 
+
+    -- &quot;attributes&quot; (VARCHAR): Opcional. Metadatos adicionales en formato JSON.
+    &apos;{&quot;alertType&quot;: &quot;priority&quot;, &quot;velocity&quot;: 65.2}&apos;
+),
+(
+    -- &quot;type&quot; (VARCHAR): Requerido. Tipos comunes: geofenceEnter, alarm, ignitionOn, deviceOffline.
+    &apos;geofenceEnter&apos;, 
+
+    -- eventtime (TIMESTAMP): Requerido. El momento en que ocurrió el evento.
+    now(), 
+
+    -- deviceid (INT4): Opcional (pero recomendado). ID del dispositivo que generó el evento.
+    100, 
+
+    -- positionid (INT4): Opcional. ID de la posición asociada (si el evento se basa en una posición).
+    45678, 
+
+    -- geofenceid (INT4): Opcional. ID de la geocerca (si el tipo es geofenceEnter/geofenceExit).
+    10, 
+
+    -- &quot;attributes&quot; (VARCHAR): Opcional. Metadatos adicionales en formato JSON.
+    &apos;{&quot;alertType&quot;: &quot;priority&quot;, &quot;velocity&quot;: 65.2}&apos;
+);</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="resultSetMaxRows"></stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Consulta de Dispositivos">
+          <stringProp name="HTTPSampler.domain">api.refactor.dev.internal</stringProp>
+          <stringProp name="HTTPSampler.port">9090</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/api-refactor/devices</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="page" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${__Random(1,400)}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">page</stringProp>
+              </elementProp>
+              <elementProp name="pageSize" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">100</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">pageSize</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJlcmc4aU1NUEY4NXFhX1hYdEFhM1g1MHVVRE94Y0JZSnM1Q2JfQ2ZfbkJRIn0.eyJleHAiOjE3NzM3OTcyNTcsImlhdCI6MTc3Mzc2MTI1NywiYXV0aF90aW1lIjoxNzczNzYxMjU3LCJqdGkiOiJvbnJ0YWM6ODUzM2M0YzctYTEzMS1kNzM5LTUyMzMtOWE2MDVlM2ZhZGU0IiwiaXNzIjoiaHR0cHM6Ly9hcGkucmVmYWN0b3IuZGV2LmludGVybmFsOjgwODAvcmVhbG1zL3RyYWNjYXItcmVhbG0iLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiZGY1NTI4NTItNWMwNy00OTc5LWJhZjctNTc3ZWY2NGNhOTYyIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoidHJhY2Nhci1jbGllbnQiLCJzaWQiOiI0NjgzYjU2YS1iODgzLWU0MjktY2Y4NC0wOTczZjA0M2U3N2YiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHBzOi8vYXBpLnJlZmFjdG9yLmRldi5pbnRlcm5hbDo4MDgyIiwiaHR0cHM6Ly9vYXV0aC5wc3Rtbi5pbyIsImh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsicm9sLXJlZmFjdG9yLW1haW50ZW5hbmNlLWNvbm5lY3Rpb25zIiwicm9sLXJlZmFjdG9yLXNpbS1jb25uZWN0aW9ucyIsImRlZmF1bHQtcm9sZXMtdHJhY2Nhci1yZWFsbSIsInJvbC1yZWZhY3Rvci1yZXBvcnQtY2FtYmluYWRvLXZpZXciLCJyb2wtcmVmYWN0b3ItYXRyaWJidXRlcy1jcmVhdGUiLCJyb2wtcmVmYWN0b3ItZHJpdmVyLXVwZGF0ZSIsInJvbC1yZWZhY3Rvci1yZXBvcnQtc3RvcHMiLCJyb2wtcmVmYWN0b3ItZHJpdmVyLXZpZXciLCJyb2wtcmVmYWN0b3ItZHJpdmVyLWRlbGV0ZSIsInJvbC1yZWZhY3Rvci1kZXZpY2UtY3JlYXRlIiwicm9sLXJlZmFjdG9yLXNhdmVkLWNvbW1hbmRzLXZpZXciLCJyb2wtcmVmYWN0b3ItcmVwb3J0LW5vdGljYXRpb24iLCJyb2wtcmVmYWN0b3Itc2F2ZWQtY29tbWFuZHMtY3JlYXRlIiwicm9sLXJlZmFjdG9yLWNhbGVuZGFyLWNyZWF0ZSIsInVtYV9hdXRob3JpemF0aW9uIiwicm9sLXJlZmFjdG9yLXZlaGljbGVzLWNyZWF0ZSIsInJvbC1yZWZhY3Rvci1zZXJ2ZXItY3JlYXRlIiwicm9sLXJlZmFjdG9yLW1haW50ZW5hbmNlLWNyZWF0ZSIsInJvbC1yZWZhY3Rvci1yZXBvcnQtcG9zaXRpb25zIiwicm9sLXJlZmFjdG9yLWRyaXZlci1jb25uZWN0aW9ucyIsInJvbC1yZWZhY3Rvci1hbm5vdW5jZW1lbnRzLXNlbmQiLCJyb2wtcmVmYWN0b3ItdXNlci11cGRhdGUiLCJyb2wtcmVmYWN0b3Itc2ltLXVwZGF0ZSIsInJvbC1yZWZhY3Rvci11c2VyLWRlbGV0ZSIsInJvbC1yZWZhY3Rvci1tYWludGVuYW5jZS12aWV3Iiwicm9sLXJlZmFjdG9yLWdlb2ZlbmNpbmctdXBkYXRlIiwicm9sLXJlZmFjdG9yLXNpbS1jcmVhdGUiLCJyb2wtcmVmYWN0b3ItZGV2aWNlLWRlbGV0ZSIsInJvbC1yZWZhY3Rvci1yZXBvcnQtb3ZlcnZpZXciLCJyb2wtcmVmYWN0b3ItcmVwb3J0LXJlcGVhdHJvdXRlIiwicm9sLXJlZmFjdG9yLWNvbXBhbnlncm91cC1kZWxldGUiLCJyb2wtcmVmYWN0b3ItZGV2aWNlLWNvbm5lY3Rpb25zIiwicm9sLXJlZmFjdG9yLWdlb2ZlbmNpbmctY3JlYXRlIiwicm9sLXJlZmFjdG9yLWF0cmliYnV0ZXMtZGVsZXRlIiwicm9sLXJlZmFjdG9yLXNlcnZlci11cGRhdGUiLCJyb2wtcmVmYWN0b3ItcHJlZmVyZW5jZXMtdmlldyIsInJvbC1yZWZhY3Rvci1hdHJpYmJ1dGVzLXZpZXciLCJyb2wtcmVmYWN0b3Itc2VydmVyLXZpZXciLCJyb2wtcmVmYWN0b3ItcHJvZmlsZS11cGRhdGUiLCJyb2wtcmVmYWN0b3ItcHJvZmlsZS1kZWxldGUiLCJyb2wtcmVmYWN0b3ItY29tcGFueWdyb3VwLWNvbm5lY3Rpb25zIiwicm9sLXJlZmFjdG9yLXZlaGljbGVzLXZpZXciLCJyb2wtcmVmYWN0b3Itc2F2ZWQgY29tbWFuZHMtdXBkYXRlIiwicm9sLXJlZmFjdG9yLXJlcG9ydC1ncmFwaGljcyIsInJvbC1yZWZhY3Rvci1zaW0tdmlldyIsInJvbC1yZWZhY3Rvci12ZWhpY2xlcy11cGRhdGUiLCJyb2wtcmVmYWN0b3ItZHJpdmVyLWNyZWF0ZSIsInJvbC1yZWZhY3Rvci1jYWxlbmRhci1kZWxldGUiLCJyb2wtcmVmYWN0b3ItZGV2aWNlLXZpZXciLCJyb2wtcmVmYWN0b3Itc2VydmVyLWRlbGV0ZSIsInJvbC1yZWZhY3Rvci12ZWhpY2xlcy1kZWxldGUiLCJyb2wtcmVmYWN0b3ItdmVoaWNsZXMtY29ubmVjdGlvbnMiLCJyb2wtcmVmYWN0b3ItbWFwLXZpZXciLCJyb2wtcmVmYWN0b3ItbWFpbnRlbmFuY2UtZGVsZXRlIiwicm9sLXJlZmFjdG9yLWdlb2ZlbmNpbmctdXBsb2FkZXh0Iiwicm9sLXJlZmFjdG9yLXJlcG9ydC10cmlwcyIsIm9mZmxpbmVfYWNjZXNzIiwicm9sLXJlZmFjdG9yLXNhdmVkIGNvbW1hbmRzLWRlbGV0ZSIsInJvbC1yZWZhY3Rvci1wcmVmZXJlbmNlcy11cGRhdGUiLCJyb2wtcmVmYWN0b3ItcHJvZmlsZS12aWV3Iiwicm9sLXJlZmFjdG9yLWRldmljZS11cGRhdGUiLCJyb2wtcmVmYWN0b3ItY2FsZW5kYXItY29ubmVjdGlvbnMiLCJyb2wtcmVmYWN0b3ItdXNlci12aWV3Iiwicm9sLXJlZmFjdG9yLWdlb2ZlbmNpbmctZGVsZXRlIiwicm9sLXJlZmFjdG9yLWNvbXBhbnlncm91cC1jcmVhdGUiLCJyb2wtcmVmYWN0b3ItY2FsZW5kYXItdmlldyIsInJvbC1yZWZhY3Rvci1tYWludGVuYW5jZS11cGRhdGUiLCJyb2wtcmVmYWN0b3ItY29tcGFueWdyb3VwLXVwZGF0ZSIsInJvbC1yZWZhY3Rvci11c2VyLWNyZWF0ZSIsInJvbC1yZWZhY3Rvci1yZXBvcnQtZXZlbnRzIiwicm9sLXJlZmFjdG9yLWdlb2ZlbmNpbmctdmlldyIsInJvbC1yZWZhY3Rvci1wcm9maWxlLWNyZWF0ZSIsInJvbC1yZWZhY3Rvci1hdHJpYmJ1dGVzLXVwZGF0ZSIsInJvbC1yZWZhY3Rvci1jYWxlbmRhci11cGRhdGUiLCJyb2wtcmVmYWN0b3ItY29tcGFueWdyb3VwLXZpZXciLCJyb2wtcmVmYWN0b3Itc2ltLWRlbGV0ZSIsInJvbC1yZWZhY3Rvci1hdHJpYmJ1dGVzLWNvbm5lY3Rpb25zIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJvcGVuaWQgcHJvZmlsZSBlbWFpbCIsImZpcnN0TmFtZSI6IkRhbmllbGEiLCJsYXN0TmFtZSI6IkJ1aXRyYWdvIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsInVzZXJfaWQiOiJkZjU1Mjg1Mi01YzA3LTQ5NzktYmFmNy01NzdlZjY0Y2E5NjIiLCJuYW1lIjoiRGFuaWVsYSBCdWl0cmFnbyIsImxpY2Vuc2VOdW1iZXIiOiJSQkM2WkM3MlRRIiwicHJlZmVycmVkX3VzZXJuYW1lIjoiZGFuaWVsYWJ1aXRyYWdvNzYzMkBleGFtcGxlLmNvbSIsImdpdmVuX25hbWUiOiJEYW5pZWxhIiwiZmFtaWx5X25hbWUiOiJCdWl0cmFnbyIsImVtYWlsIjoiZGFuaWVsYWJ1aXRyYWdvNzYzMkBleGFtcGxlLmNvbSJ9.geqYfFp_jLA_zoPQkM8YeKaQ3bswvONbkN5vFVuy_gFTPamUq7i0fiO9VAgkx8heqIZSTR3ctFUwc0e_iXI61xVD61OMgtN1rVcJS9y87bq1dwpAMMQcuCV6SAtb6m8ItCvVDPukYRmjQrCE_SYRe8UCgQH6O3fihH-OF4Ha7SBXmy6HQ5KxgmW8jB5CIR2BdFvi3OH0qIn_fg-P9Jp_HSJiGF41WgrEOWigqJPAg3WEFiUkXOKIHta9KniZoUcMk-4_jLZdPXbqfRMnsMQJa_e7GehKGU1uxOCBSE1X-EanUsFjmoyedAbXehRPUjRyb6z-zhdUW7NDXRS2UQaReQ</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Cookie</stringProp>
+                <stringProp name="Header.value">JSESSIONID=node0351hv0nuep8oz7c757xxkcra22.node0</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.ThreadsStateOverTimeGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="Usuarios Virtuales">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+          <longProp name="interval_grouping">500</longProp>
+          <boolProp name="graph_aggregated">false</boolProp>
+          <stringProp name="include_sample_labels"></stringProp>
+          <stringProp name="exclude_sample_labels"></stringProp>
+          <stringProp name="start_offset"></stringProp>
+          <stringProp name="end_offset"></stringProp>
+          <boolProp name="include_checkbox_state">false</boolProp>
+          <boolProp name="exclude_checkbox_state">false</boolProp>
+        </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
+        <hashTree/>
+        <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.HitsPerSecondGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="Hits per Second">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+          <longProp name="interval_grouping">1000</longProp>
+          <boolProp name="graph_aggregated">false</boolProp>
+          <stringProp name="include_sample_labels"></stringProp>
+          <stringProp name="exclude_sample_labels"></stringProp>
+          <stringProp name="start_offset"></stringProp>
+          <stringProp name="end_offset"></stringProp>
+          <boolProp name="include_checkbox_state">false</boolProp>
+          <boolProp name="exclude_checkbox_state">false</boolProp>
+        </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
+        <hashTree/>
+        <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.TransactionsPerSecondGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="Transactions per Second">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+          <longProp name="interval_grouping">1000</longProp>
+          <boolProp name="graph_aggregated">false</boolProp>
+          <stringProp name="include_sample_labels"></stringProp>
+          <stringProp name="exclude_sample_labels"></stringProp>
+          <stringProp name="start_offset"></stringProp>
+          <stringProp name="end_offset"></stringProp>
+          <boolProp name="include_checkbox_state">false</boolProp>
+          <boolProp name="exclude_checkbox_state">false</boolProp>
+        </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
